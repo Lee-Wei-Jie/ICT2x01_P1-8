@@ -1,7 +1,7 @@
 1. THOU SHALL ALWAYS COMMIT TO DEV BEFORE THE MASTER
-2. do feature work only in ur own feature branch
-3. commit regularly
-4. when unit testing is done, commit/push final changes and initiate pull request to dev
-5. after reviewer approved, merge feature branch into dev
-6. delete feature branch.
+2. Do feature work only in your own feature branch
+3. Commit regularly
+4. when testing is done, commit/push final changes and initiate pull request to dev
+5. After reviewer approved, merge feature branch into dev
+6. Delete feature branch
 69. Nice.
