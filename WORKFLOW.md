@@ -7,3 +7,4 @@
 7. Nice.
 8. Only do bugfixes & documentation in rel branches.
 9. Use tags to DEMARCATE rel versions in master branch.
+10. Other developers continue works off the dev branch
