@@ -5,3 +5,5 @@
 5. After reviewer approved, merge feature branch into dev
 6. Delete feature branch
 69. Nice.
+9. almost the same as a rel branch but works off prev release version
+
