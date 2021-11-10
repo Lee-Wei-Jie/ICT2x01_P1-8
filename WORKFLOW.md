@@ -4,7 +4,7 @@
 4. when testing is done, commit/push final changes and initiate pull request to dev
 5. After reviewer approved, merge feature branch into dev
 6. Delete feature branch
-7. Nice.
-8. Only do bugfixes & documentation in rel branches.
-9. Use tags to DEMARCATE rel versions in master branch.
+7. Only do bugfixes & documentation in rel branches.
+8. Use tags to DEMARCATE rel versions in master branch.
+9. almost the same as a rel branch but works off prev release version
 10. Other developers continue works off the dev branch
