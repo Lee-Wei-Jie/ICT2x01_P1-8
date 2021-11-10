@@ -5,3 +5,5 @@
 5. After reviewer approved, merge feature branch into dev
 6. Delete feature branch
 69. Nice.
+7. Only do bugfixes & documentation in rel branches.
+8. Use tags to demarcate rel versions in master branch.
