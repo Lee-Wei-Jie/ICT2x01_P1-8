@@ -1,10 +1,6 @@
-1. THOU SHALL ALWAYS COMMIT TO DEV BEFORE THE MASTER
-2. Do feature work only in your own feature branch
-3. Commit regularly
-4. when testing is done, commit/push final changes and initiate pull request to dev
-5. After reviewer approved, merge feature branch into dev
-6. Delete feature branch
-7. Only do bugfixes & documentation in rel branches.
-8. Use tags to DEMARCATE rel versions in master branch.
-9. almost the same as a rel branch but works off prev release version
-10. Other developers continue works off the dev branch
+1. master branch will be our baseline branch
+2. dev branch will have the the development features being branched off, for now, it is car and web
+3. changes shall be to car and web branches 
+4. once 3. is done, you can merge into dev branch, before finalizing it in master branch
+5. master branch will be our baseline
+
