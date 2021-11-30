@@ -1,0 +1,7 @@
+1.) Launch Pycharm Community, Create a new python project (you can name it anything you want).
+2.) Open terminal within the created project and type "pip install flask" followed by enter key.
+3.) Wait for installation to be completed.
+4.) Copy codes from main.py and paste into ur newly created python project.
+5.) Copy all other folders and paste into the python project folder.
+6.) Click on the "run" button to start hosting the webpage.
+7.) Access the link generated in the "Run" tab (bottom left of pycharm) using any web browser to view the hosted webpage.
