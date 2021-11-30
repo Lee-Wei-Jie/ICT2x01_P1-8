@@ -12,23 +12,27 @@ Singapore Institute of Technology
 ### Webpage
 
 # Workflow
-### Commandments
-1. The `master` branch will be the team's **baseline** branch
-2. Development **features** should be branched off the respective development branches.
-3. Changes shall only be made to the respective `car` and `web` branches.
-4. Once 3. is done, code will have to be evaluated, before finalizing into the `master` branch.
+1. `master` branch will be our *baseline* branch for pull request of both `mastercar` and `masterwebpage`
+2. `mastercar` branch and `masterwebpage` branch are the *baseline* branches for both the car development and web development
+3. Any developments to either the `mastercar` or `masterwebpage` will mean that you need to first branch off from them respectively. Then when your branch is working, you can merge it into the `mastercar` or `masterwebpage`.
+   1. We will only be doing 1 branch off of each parent into both `devcar` and `devwebpage` respectively (illustrated below)
+4. At any time, there should be the same number of pull request to `mastercar` and `masterwebpage`. Both of which shall only be the working copies and same iteration (and finalized to be baseline).
+5. Hierarchy breakdown are as such:
+   1. `master`
+      1. `mastercar`
+         1. `devcar`
+      2. `masterwebpage`
+         1. `devwebpage`
 
 ### Branches
 
 1. Branch Naming Conventions
-The branch should be correctly named, in accordance to the feature / fix.
+The branch name must follow hierarchical branch that the team have already worked out on in the WORKFLOW.md
 
 2. Branching Conventions
-New features / fixes should be **branched off** the respective development branches:
-`car`
-`web`
+New features / fixes should be **branched off** the respective development branches if needed
 
-3. Merging Conventions
+1. Merging Conventions
 *Code committed -> Code reviewed -> Code merged into `master` branch -> Baseline* 
 Committed code should be properly reviewed by another party of the team. 
 Request for a pull, before merging from the new branch to the respective development branches.
