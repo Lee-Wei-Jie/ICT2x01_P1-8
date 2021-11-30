@@ -39,7 +39,7 @@
                     <textarea name="message" rows="10" cols="30">
                     </textarea>
                     <input type="submit" class="button primary" value="Send!">
-                    <input type="button" value="Clear" onclick="javascript:eraseText();">
+                    <input type="button" value="Clear" onclick="window.location.reload();">
                 </form>
             </div>
 
