@@ -23,15 +23,32 @@ def design():
 def list():
    return render_template('list.php')
 
+#function to split lines  
+def splitLines(instr):
+   lines = instr.split('\r\n')
+   string = " "
+   for i in lines:
+      if i == 'Move Forward':
+         string += "F"
+      if i == 'Move Backward':
+         string += "B"
+      if i == 'Turn Right':
+         string += "R"
+      if i == 'Turn Left':
+         string += "L"
+   return string
 
 @app.route('/sendInstructions', methods = ['POST','GET'])
 def getdata():
    if request.method == 'POST':
-      command = request.form['message']
-      mylist.append(str(command))
-      return "Command==" + mylist[-1] + ".\r\n"
+      instructions = request.form['message']
+      commands = splitLines(instructions)
+      mylist.append(str(instructions))
+      #print(mylist, file=sys.stderr)
+      return "Command==" + commands + "."
    else:
-      return "Command==" + mylist[-1] + ".\r\n"
+      #return "Command==" + commands + "."
+      return "Command==" + mylist[-1] + ".\r\n" # I cant print commands here unless I call the function so I leave it as myList
 
 #pc have to be connected to same network as wifi module, 192.168.43.241 is my ipv4 address aka ip for hosted app.(to test sending of command to car)
 # app.run(host="192.168.43.241",port="80",debug=True)
