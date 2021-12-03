@@ -136,20 +136,20 @@ void CAR_TurnRight(void){
     CAR_SetState(STATE_TURNINGRIGHT);
     /****SWAP OUTPUT SIDE****/
     //LEFT WHEEL SLOW DOWN
-    pwmConfigLeft.dutyCycle = 2500;
+    pwmConfigLeft.dutyCycle = 3000;
     //RIGHT WHEEL SLOW DOWN + REVERSE
-    pwmConfigRight.dutyCycle = 2000;
+    pwmConfigRight.dutyCycle = 500;
     GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN0);        //P4.0 LOW
     GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN2);       //P4.2 HIGH
 
     CAR_GeneratePWM();
 
     //delay to allow for turn
-    Delay(490000);
+//    Delay(490000);
 
     /****SWAP BACK TO NORMAL****/
-    //CAR_InitializeLeftMotor();
-    //CAR_InitializeRightMotor();
+    CAR_InitializeLeftMotor();
+    CAR_InitializeRightMotor();
 
     //CAR_GeneratePWM();
     CAR_SetState(STATE_CONNECTED);
@@ -161,19 +161,19 @@ void CAR_TurnLeft(void){
     CAR_SetState(STATE_TURNINGLEFT);
     /****SWAP OUTPUT SIDE****/
     //RIGHT WHEEL SLOW DOWN
-    pwmConfigRight.dutyCycle = 2500;
+    pwmConfigRight.dutyCycle = 3000;//2500
     //LEFT WHEEL SLOW DOWN + REVERSE
-    pwmConfigLeft.dutyCycle = 2000;
+    pwmConfigLeft.dutyCycle = 500;//2000
     GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN4);        //P4.4 LOW
     GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN5);       //P4.5 HIGH
 
     CAR_GeneratePWM();
 
-    Delay(490000);
+//    Delay(490000);
 
     /****SWAP BACK TO NORMAL****/
-    //CAR_InitializeLeftMotor();
-    //CAR_InitializeRightMotor();
+    CAR_InitializeLeftMotor();
+    CAR_InitializeRightMotor();
 
     //CAR_GeneratePWM();
     CAR_SetState(STATE_CONNECTED);

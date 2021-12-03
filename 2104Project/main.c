@@ -1,29 +1,19 @@
 /******************************************************************************
  * MSP432 ICT2104 / ICT2x01 Project
- * Description: <TO ADD>
  *
- *                MSP432P401
- *             ------------------
- *         /|\|                  |
- *          | |                  |
- *          --|RST               |
- *            |                  |
- *            |                  |
- *            |                  |
- *            |                  |
- *            |                  |
  *
  * ICT2104 Team 2-7
  * - Koh Jia Cheng (2000665)
  * - Lee Wei Jie (2000990)
  *
- * **TO NOTE: In deployment environment, comment out all the print statements
+ *
+ * PID implemented:
+ * ********The wheels will be adjusted every second to ensure both wheels are of the same speed (baseline/target:the faster wheel)
+ * State Machine:
+ * ********Simple State Machine implemented to prevent PID from kicking in during a Turn.
+ * Optimization applied:
+ * ********3Mhz timer for all clock (Even for WiFi Modules, Libraries are edited accordingly. Baud rate for UART as well)
  *******************************************************************************/
-
-//TO DO:
-// WIFI
-// Ask prof if it is possible to change the delay cycles in the wifi cuz
-// 3mhz a bit slow for high delay cycles
 
 
 //Consolidate Header declarations
@@ -166,6 +156,17 @@ int main(void)
     /*P6.1, given the color YELLOW wire*/
     GPIO_setAsOutputPin(GPIO_PORT_P6, GPIO_PIN1);
 
+    /*For visual checking during deployment(green=connected,)*/
+    /*All lights up on error(White=error)*/
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN0);                       //Lights up Red when connected.
+    GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN0);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN1);                       //Lights up Green when connected.
+    GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN2);                       //Lights up Blue when connected.
+    GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
+
+
+
     /*******************************************Final Closure Settings********************************************************************************************/
     printf("CONFIGURING CLOSURE\n");
 
@@ -206,7 +207,6 @@ int main(void)
 
     /*Hard Reset ESP8266*/
     ESP8266_HardReset();
-    __delay_cycles(6000000);
     /*flush reset data, we do this because a lot of data received cannot be printed*/
     UART_Flush(EUSCI_A2_BASE);
     MSPrintf(EUSCI_A0_BASE, "Hard Reset Performed\n\r");
@@ -218,6 +218,9 @@ int main(void)
     if (!ESP8266_ChangeMode1())
     {
         MSPrintf(EUSCI_A0_BASE, "Failed to Change Mode\r\n");
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         /*Trap MSP432 if failed connection*/
         while (1)
         ;
@@ -229,6 +232,9 @@ int main(void)
      if (!ESP8266_SetSoftAP())
      {
         MSPrintf(EUSCI_A0_BASE, "Failed to set AP Mode\r\n");
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         /*Trap MSP432 if failed connection*/
         while (1)
         ;
@@ -239,6 +245,9 @@ int main(void)
     if (!ESP8266_CheckConnection())
     {
         MSPrintf(EUSCI_A0_BASE, "Failed MSP432 UART connection\r\n");
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         /*Trap MSP432 if failed connection*/
         while (1)
         ;
@@ -248,6 +257,9 @@ int main(void)
     if (!ESP8266_EnableMultipleConnections(1))
     {
         MSPrintf(EUSCI_A0_BASE, "Failed to set multiple connections\r\n");
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         while (1)
         ;
     }
@@ -263,7 +275,6 @@ int main(void)
      }
 
      MSPrintf(EUSCI_A0_BASE, "Connected to Mobile hotspot!\n\r");
-
      /*Declaring connection settings*/
      char HTTP_WebPage[] = "192.168.43.241";
      char Port[] = "80";
@@ -274,7 +285,11 @@ int main(void)
      if(!ESP8266_EstablishConnection('0', TCP, HTTP_WebPage, Port))
      {
          MSPrintf(EUSCI_A0_BASE, "Failed to connect to: %s\r\nERROR: %s\r\n", HTTP_WebPage, ESP8266_Data);
-         while(1);
+         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+         while(1)
+         ;
      }
 
      MSPrintf(EUSCI_A0_BASE, "TCP connection Establish \n\r");
@@ -283,6 +298,9 @@ int main(void)
      if(!ESP8266_SendData('0', HTTP_Request, HTTP_Request_Size))
      {
          MSPrintf(EUSCI_A0_BASE, "Failed to send: %s to %s \r\nError: %s\r\n", HTTP_Request, HTTP_WebPage, ESP8266_Data);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
          while(1);
      }
     /*Pointer to extract commands received from wifi module*/
@@ -290,24 +308,25 @@ int main(void)
     printf(command);
     MSPrintf(EUSCI_A0_BASE, "Data sent: %s to %s\r\n\r\nCommand to execute%s\r\n", HTTP_Request, HTTP_WebPage, ESP8266_Data);
 
+    char * ptr = command;
+           ptr++;
+           ptr++;
+           ptr++;
 
-    printf("GOING INTO LPM0\n");
+
+    GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+
+//    printf("GOING INTO LPM0\n");
     /*Sleeping loop for power efficiency*/
     while(1){
-        char * ptr = command;
-        ptr++;
-        ptr++;
-        ptr++;
-
         printf("%c", *ptr);
-
         char instruction = *ptr;
 
         switch (instruction)
         {
             case 'F':
                 CAR_Forward();
-                __delay_cycles(6000000);
+                __delay_cycles(9000000);
                 CAR_Stop();
                 *ptr=' ';
                 ptr++;
@@ -315,7 +334,7 @@ int main(void)
 
             case 'L':
                 CAR_TurnLeft();
-                __delay_cycles(6000000);
+                __delay_cycles(7600000);
                 CAR_Stop();
                 *ptr=' ';
                 ptr++;
@@ -323,7 +342,7 @@ int main(void)
 
             case 'R':
                 CAR_TurnRight();
-                __delay_cycles(6000000);
+                __delay_cycles(8100000);
                 CAR_Stop();
                 *ptr=' ';
                 ptr++;
@@ -331,6 +350,7 @@ int main(void)
 
             case '.':
                 UART_Flush(EUSCI_A2_BASE);
+                GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
                 break;
         }
 //        PCM_gotoLPM0();
