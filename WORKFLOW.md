@@ -5,6 +5,7 @@
    1. Every member shall branch off of each parent from both `devcar` and `devwebpage` respectively (illustrated below)
    2. Off the branch, the any development of code and project shall branched if necessary
 4. At any time, the latest commit to `mastercar` and `masterwebpage` will be the baseline of the branch. Both of which shall only be the working copies and same iteration
+   1. It the contents of these files should be in a folder to facilitate merging of both the branch later during a pull request into the `master`
 5. Hierarchy breakdown are as such:
    1. `master`
       1. `mastercar`
