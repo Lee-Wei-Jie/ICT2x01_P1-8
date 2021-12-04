@@ -165,8 +165,6 @@ int main(void)
     GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN2);                       //Lights up Blue when connected.
     GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
 
-
-
     /*******************************************Final Closure Settings********************************************************************************************/
     printf("CONFIGURING CLOSURE\n");
 
@@ -207,65 +205,67 @@ int main(void)
 
     /*Hard Reset ESP8266*/
     ESP8266_HardReset();
+    __delay_cycles(6000000);
     /*flush reset data, we do this because a lot of data received cannot be printed*/
     UART_Flush(EUSCI_A2_BASE);
+    __delay_cycles(3000000);
     MSPrintf(EUSCI_A0_BASE, "Hard Reset Performed\n\r");
 
 
 
 
-    /*Check UART connection to MSP432*/
-    if (!ESP8266_ChangeMode1())
-    {
-        MSPrintf(EUSCI_A0_BASE, "Failed to Change Mode\r\n");
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
-        /*Trap MSP432 if failed connection*/
-        while (1)
-        ;
+     /*Check UART connection to MSP432*/
+     if (!ESP8266_ChangeMode3())
+     {
+       MSPrintf(EUSCI_A0_BASE, "Failed to Change Mode\r\n");
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+       /*Trap MSP432 if failed connection*/
+       while (1)
+       ;
      }
-        MSPrintf(EUSCI_A0_BASE, "SoftAP + Station Mode Enabled \n\r");
+       MSPrintf(EUSCI_A0_BASE, "SoftAP + Station Mode Enabled \n\r");
 
 
      /*Check UART connection to MSP432*/
      if (!ESP8266_SetSoftAP())
      {
         MSPrintf(EUSCI_A0_BASE, "Failed to set AP Mode\r\n");
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         /*Trap MSP432 if failed connection*/
         while (1)
         ;
      }
-        MSPrintf(EUSCI_A0_BASE, "SoftAP available \n\r");
+        MSPrintf(EUSCI_A0_BASE, "ESP8266 Renamed \n\r");
 
-      /*Check UART connection to MSP432*/
-    if (!ESP8266_CheckConnection())
-    {
+     /*Check UART connection to MSP432*/
+     if (!ESP8266_CheckConnection())
+     {
         MSPrintf(EUSCI_A0_BASE, "Failed MSP432 UART connection\r\n");
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         /*Trap MSP432 if failed connection*/
         while (1)
         ;
-    }
+     }
 
-    /*Enable multiple connections*/
-    if (!ESP8266_EnableMultipleConnections(1))
-    {
+     /*Enable multiple connections*/
+     if (!ESP8266_MultiMode())
+     {
         MSPrintf(EUSCI_A0_BASE, "Failed to set multiple connections\r\n");
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+        GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
         while (1)
         ;
-    }
+     }
 
 
-        MSPrintf(EUSCI_A0_BASE, "Multiple Connections Enabled\n\r");
+     MSPrintf(EUSCI_A0_BASE, "Multiple Connections Enabled\n\r");
      /*Connect to Access Point if necessary here*/
      MSPrintf(EUSCI_A0_BASE, "Connecting to Wifi... \n\r");
      while (!ESP8266_ConnectToAP("Guthixo", "Guthixo1"))
@@ -275,24 +275,30 @@ int main(void)
      }
 
      MSPrintf(EUSCI_A0_BASE, "Connected to Mobile hotspot!\n\r");
-     /*Declaring connection settings*/
-     char HTTP_WebPage[] = "192.168.43.241";
-     char Port[] = "80";
-     char HTTP_Request[] = "GET /sendInstructions HTTP/1.1\r\n\r\n";
-     uint32_t HTTP_Request_Size = sizeof(HTTP_Request) - 1;
+
+
+      /*Declaring connection settings*/
+      char HTTP_WebPage[] = "192.168.43.241";
+      char Port[] = "80";
+      char HTTP_Request[] = "GET /sendInstructions HTTP/1.1\r\n\r\n";
+      uint32_t HTTP_Request_Size = sizeof(HTTP_Request) - 1;
+
+     /*Loop to keep sending GET request to webpage for retrieval of commands to exeecute*/
+     while(1)
+     {
 
      /*Try to establish TCP connection to a HTTP server*/
      if(!ESP8266_EstablishConnection('0', TCP, HTTP_WebPage, Port))
      {
          MSPrintf(EUSCI_A0_BASE, "Failed to connect to: %s\r\nERROR: %s\r\n", HTTP_WebPage, ESP8266_Data);
-         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-         //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+         GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
          while(1)
          ;
      }
 
-     MSPrintf(EUSCI_A0_BASE, "TCP connection Establish \n\r");
+     MSPrintf(EUSCI_A0_BASE, "TCP Connection Established \n\r");
 
      /*Query data to connected HTTP server, in order to do this look for an API and request a key*/
      if(!ESP8266_SendData('0', HTTP_Request, HTTP_Request_Size))
@@ -304,22 +310,22 @@ int main(void)
          while(1);
      }
     /*Pointer to extract commands received from wifi module*/
-    command=strstr(ESP8266_Data,"==");
-    printf(command);
+    command = strstr(ESP8266_Data, "==");
     MSPrintf(EUSCI_A0_BASE, "Data sent: %s to %s\r\n\r\nCommand to execute%s\r\n", HTTP_Request, HTTP_WebPage, ESP8266_Data);
 
-    char * ptr = command;
-           ptr++;
-           ptr++;
-           ptr++;
 
+    char * ptr = command;
+            ptr++;
+            ptr++;
+            ptr++;
 
     GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
 
-//    printf("GOING INTO LPM0\n");
     /*Sleeping loop for power efficiency*/
     while(1){
+
         printf("%c", *ptr);
+
         char instruction = *ptr;
 
         switch (instruction)
@@ -334,7 +340,7 @@ int main(void)
 
             case 'L':
                 CAR_TurnLeft();
-                __delay_cycles(7600000);
+                __delay_cycles(9000000);
                 CAR_Stop();
                 *ptr=' ';
                 ptr++;
@@ -342,19 +348,25 @@ int main(void)
 
             case 'R':
                 CAR_TurnRight();
-                __delay_cycles(8100000);
+                __delay_cycles(9000000);
                 CAR_Stop();
                 *ptr=' ';
                 ptr++;
                 break;
 
-            case '.':
-                UART_Flush(EUSCI_A2_BASE);
-                GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
-                break;
         }
 //        PCM_gotoLPM0();
+        if (instruction == '.')
+        {
+            UART_Flush(EUSCI_A2_BASE);
+            GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
+            __delay_cycles(4500000);//12000000 is working
+            break;
+        }
     }
+
+  } //end while
+
 }
 
 float SR04_GetDistance(void){
@@ -451,8 +463,8 @@ void TA1_0_IRQHandler(void){
         printf("Speed: %f cm/s\n", CAR_AverageSpeed);
     }
     else if (CAR_UpTime % 1 == 0 && CAR_STATE == STATE_MOVING){        //Use PID every 1 second
-        NOTCH_LeftCountTotal = 0;
-        NOTCH_RightCountTotal = 0;
+//        NOTCH_LeftCountTotal = 0;
+//        NOTCH_RightCountTotal = 0;
         PID_Controller(NOTCH_LeftCountTotal, NOTCH_RightCountTotal);
     }
 
