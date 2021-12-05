@@ -40,6 +40,7 @@ def splitLines(instr):
 
 @app.route('/sendInstructions', methods = ['POST','GET'])
 def getdata():
+   global getflag
    if request.method == 'POST':
       instructions = request.form['message']
       commands = splitLines(instructions)
@@ -47,8 +48,10 @@ def getdata():
       #print(mylist, file=sys.stderr)
       return "Command==" + commands + "."
    else:
-      #return "Command==" + commands + "."
-      return "Command==" + mylist[-1] + ".\r\n" # I cant print commands here unless I call the function so I leave it as myList
+      if getflag == 1:
+         getflag = 0
+         return "Command==" + mylist[-1] + ".\r\n" # I cant print commands here unless I call the function so I leave it as myList
+      return "Command== None."
 
 #pc have to be connected to same network as wifi module, 192.168.43.241 is my ipv4 address aka ip for hosted app.(to test sending of command to car)
 # app.run(host="192.168.43.241",port="80",debug=True)
