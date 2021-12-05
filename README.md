@@ -43,11 +43,13 @@ Request for a pull, before merging from the new branch to the respective develop
 
 # Testing
 
-## Black-box Testing
-## White-box Testing
 ## UAT
-
-# Product Roadmaps
-- 
+## White-box Testing
+### Login
+- No PIN Specified
+- Wrong PIN Specified
+- Maximum Limit Exhausted
+- Login Attempt After Maximum Limit Exhausted
+- Successfully Logged-in
 
 # References
