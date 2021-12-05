@@ -136,15 +136,14 @@ void CAR_TurnRight(void){
     CAR_SetState(STATE_TURNINGRIGHT);
     /****SWAP OUTPUT SIDE****/
     //LEFT WHEEL don't move
-    pwmConfigLeft.dutyCycle = 0;//3000
+    pwmConfigLeft.dutyCycle = 0;
     //RIGHT WHEEL REVERSE
-    pwmConfigRight.dutyCycle = 3000;//500
+    pwmConfigRight.dutyCycle = 2800;
+    /*For right wheel to move forward*/
     GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN0);    //P4.0 LOW
     GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN2);   //P4.2 HIGH
-
     CAR_GeneratePWM();
 
-    //delay to allow for turn
 
     /****SWAP BACK TO NORMAL****/
 //    CAR_InitializeLeftMotor();
@@ -160,19 +159,14 @@ void CAR_TurnLeft(void){
     CAR_SetState(STATE_TURNINGLEFT);
     /****SWAP OUTPUT SIDE****/
     //RIGHT WHEEL turns only
-    pwmConfigRight.dutyCycle = 3600;//3000
+    pwmConfigRight.dutyCycle = 3300;//3000
     //LEFT WHEEL don't move
     pwmConfigLeft.dutyCycle = 0;//500
-    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN4);      //P4.4 LOW
-    GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN5);     //P4.5 HIGH
-
+    /*For right wheel to move forward*/
+    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN2);
+    GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN0);
     CAR_GeneratePWM();
 
-
-
-    /****SWAP BACK TO NORMAL****/
-//    CAR_InitializeLeftMotor();
-//    CAR_InitializeRightMotor();
 
     //CAR_GeneratePWM();
     CAR_SetState(STATE_CONNECTED);
@@ -194,9 +188,7 @@ int PID_Controller(int leftnotch, int rightnotch){
         else if(leftnotch < rightnotch){ //Left side slower
             //derivative = rightnotch - leftnotch;
             //boost LEFT side
-            //pwmConfigLeft.dutyCycle += 250;
-            //reduce right side instead, prevents car from speeding up overtime
-            pwmConfigRight.dutyCycle -= 250;
+            pwmConfigLeft.dutyCycle += 250;
             CAR_GeneratePWM();
         }
     }

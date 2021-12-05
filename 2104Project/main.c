@@ -315,9 +315,9 @@ int main(void)
 
 
     char * ptr = command;
-            ptr++;
-            ptr++;
-            ptr++;
+    ptr++;
+    ptr++;
+    ptr++;
 
     GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
 
