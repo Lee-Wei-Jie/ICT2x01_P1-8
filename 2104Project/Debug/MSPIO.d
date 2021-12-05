@@ -9,7 +9,7 @@ MSPIO.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg
 MSPIO.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_types.h
 MSPIO.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/cdefs.h
 MSPIO.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_types.h
-MSPIO.obj: C:/Users/weiji/workspace_v10/ESP8266(tester)/UART_Driver.h
+MSPIO.obj: C:/Users/weiji/workspace_v10/2104Projectbackup25112021/UART_Driver.h
 MSPIO.obj: C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/driverlib.h
 MSPIO.obj: C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/adc14.h
 MSPIO.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdint.h
@@ -75,7 +75,7 @@ C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/cdefs.h:
 
 C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_types.h:
 
-C:/Users/weiji/workspace_v10/ESP8266(tester)/UART_Driver.h:
+C:/Users/weiji/workspace_v10/2104Projectbackup25112021/UART_Driver.h:
 
 C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/driverlib/driverlib.h:
 

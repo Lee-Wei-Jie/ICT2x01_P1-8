@@ -29,6 +29,6 @@ void ESP8266_Terminal(void);
 char *ESP8266_GetBuffer(void);
 void ESP8266_HardReset(void);
 
-bool ESP8266_ChangeMode3(void);
+bool ESP8266_ChangeMode1(void);
 
 #endif /* DEVICES_ESP8266_H_ */
