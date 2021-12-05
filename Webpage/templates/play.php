@@ -10,19 +10,24 @@
         <style>
             #instructionsList {
                 list-style-type: none;      /* Removes the list dot */
+                padding-left: 0px;
             }
             li{
                 margin-top:10px;
+            }   
+            #homeBtn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         </style>
     </head>
-    <h2 class="major">Control the Car!</h2>
-    <body style="padding: 15px;">
-        
+    <h2 class="major" style="padding: 15px;">Control the Car!</h2>
+    <body style="padding: 15px; float:none;">
         <div class="container">
 
             <!-- 1st Column -->
-            <div style="position: relative; float:left;">
+            <div style="position: relative; float: left; margin-right: 50px;">
                 <ul id = "instructionsList" style="font-size: 20px;">
                     <li draggable="true">Move Forward</li>
                     <li draggable="true">Move Backward</li>
@@ -30,28 +35,22 @@
                     <li draggable="true">Turn Left</li>
                     <li draggable="true">Loop</li>
                 </ul>
+		<a href="/" id="homeBtn" class="button primary" draggable="false">☰ Home</a>
             </div>
 
             <!-- 2nd Column -->
-            <div name = "fullNamesContainer" style="position: relative; margin-left: 50px; float:left;">
+            <div name = "fullNamesContainer" style="position: relative; float:left;">
                 <form action="/sendInstructions" method="post">
-                    <form action="/action_page.php">
-                    <textarea name="message" rows="10" cols="30">
-                    </textarea>
+                    <!--<form action="/action_page.php">-->
+                    <textarea id="instructions" name="message" rows="10" cols="30"></textarea>
                     <input type="submit" class="button primary" value="Send!">
-                    <input type="button" value="Clear" onclick="window.location.reload();">
+                    <input type="button" value="Clear" onclick="eraseText();">
                 </form>
             </div>
 
-            <!-- 3rd Column -->
-            <div style="float:left;">
-                <img src="static/mazes/440011.png" align="middle" style="margin-left:auto; margin-right: auto; margin-top: auto; margin-bottom: auto;"/>
-            </div>
-
-
             <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ url_for('static', filename='copy.js') }}"></script>
-            
+
         </div>
     </body>
 </html>

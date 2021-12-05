@@ -19,39 +19,7 @@
                         $.get("http://192.168.1.44:80/", {});
                     }
                 </script>
-		<!--<style>
-			.container{
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				text-align: center;
-			}
-			.container h1{
-				color: #fff;
-				font-size: 36px;
-				margin-bottom: 40px;
-			}
-			.popup{
-				background: rgba(0,0,0,0.6);
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-			}
-			.popup-content{
-				height: 250px;
-				width: 500px;
-				background: #fff;
-				padding: 20px;
-				border-radius: 5px;
-				position: relative;
-			}
-		</style>-->
+
 	</head>
 	<body class="is-preload">
 
@@ -75,8 +43,6 @@
                                                         <li><a href="#challenge">Challenge</a></li>
                                                         <li><a href="#design">Design</a></li>
                                                         <li><button class="button primary" onclick="connectToNetwork()">Connect</button></li>
-                                                        <!--<li><a href="#contact">Contact</a></li>-->
-                                                        <!--<li><a href="#elements">Elements</a></li>-->
                                                     </ul>
 						</nav>
 					</header>
@@ -129,25 +95,40 @@
 							<article id="login">
 								<h2>Enter your Design PIN</h2>
 								<form name="login">
-									<input type="password" name="pin" placeholder="Enter PIN"><br>
+									<input id="pin" type="password" name="pin" placeholder="Enter PIN"><br>
 									<div style="text-align: center">
-										<input type="button" class="button primary" onclick="check(this.form)" value="Login"/>
-										<input type="reset" class="button" value="Clear fields"/>
+										<input id="submitBtn" type="button" class="button primary" onclick="check(this.form)" value="Login"/>
+										<input id="resetBtn" type="reset" class="button" value="Clear fields"/>
 									</div>
 								</form>
-								<script language="javascript">
-								    function check(form) {
-										if(form.pin.value == "admin123") {
-											window.open('/design')
-										}
-										else { /* displays error message */
-											alert("Access Denied! PIN is incorrect!")
-										}
-									}
-								</script>
 							</article>
+							<script language="javascript">
+						        	var attempts = 5;
+								
+								function check(form) {
+								    var pinObject = document.getElementById("pin")
+								    var hashObject = new jsSHA("SHA-512", "TEXT", {numRounds: 1})
+								    hashObject.update(pinObject.value);
+								    var hash = hashObject.getHash("HEX")
+								    pinObject.value = hash;
 
-
+								    if(pinObject.value === "7fcf4ba391c48784edde599889d6e3f1e47a27db36ecc050cc92f259bfac38afad2c68a1ae804d77075e8fb722503f3eca2b2c1006ee6f6c7b7628cb45fffd1d") {
+									window.location = '/design'
+								    }
+								    else {
+									attempts--
+									if (attempts > 0){
+									    alert("Incorrect PIN. Attempts remaining: " +attempts+ ". Please re-enter.")
+									}
+									else {
+									    alert("Access Denied! PIN is incorrect! 0 attempts left.")
+									    document.getElementById("pin").disabled = true
+									    document.getElementById("submitBtn").disabled = true
+									    document.getElementById("resetBtn").disabled = true
+									}
+								    }
+								}
+						    	</script>
 					</div>
 
 				<!-- Footer -->
@@ -166,6 +147,7 @@
 			<script src="static/assets/js/breakpoints.min.js"></script>
 			<script src="static/assets/js/util.js"></script>
 			<script src="static/assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
 
 	</body>
 </html>
