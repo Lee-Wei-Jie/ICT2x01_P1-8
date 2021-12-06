@@ -21,12 +21,13 @@ Singapore Institute of Technology
 git clone https://github.com/Guthixo/ICT2x01_P1-8.git
 ```
 ![GitClone - git clone the repository](/img/tests/gitClone.gif)
-3. Download the necessary python version available
-4. In the command prompt, enter "pip install flask" followed by enter key
+
+2. Download the necessary python version available
+3. In the command prompt, enter "pip install flask" followed by enter key
 ```
 pip install flask
 ```
-6. To start hosting the webpage, change the directory to Webpage in command prompt and enter "python .\main.py" OR click on the "run" button.
+4. To start hosting the webpage, change the directory to Webpage in command prompt and enter "python .\main.py" OR click on the "run" button.
 ```
 cd Webpage
 python .\main.py
