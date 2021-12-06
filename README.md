@@ -75,6 +75,7 @@ Request for a pull, before merging from the new branch to the respective develop
 ---
 
 ### System Test Case 1
+![ST1 - Starting the Webpage](/img/tests/ST1.jpg)
 - ST1 tests if user are able to access the localhost webpage.
 
 ![ST1 - Starting the Webpage](/img/tests/ST1.gif)
