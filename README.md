@@ -100,6 +100,11 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ![Login Test - Success](/img/tests/login-success.gif)
 
+### System Test Case
+- System Test Case 5
+- ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
+-![ST5 - Redirect Page to Play](/img/tests/ST5.gif)
+
 ## White-box Testing
 ---
 
