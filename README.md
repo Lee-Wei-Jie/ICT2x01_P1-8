@@ -92,16 +92,15 @@ Request for a pull, before merging from the new branch to the respective develop
 
 
 # Reflections
-
-##Crystal Choo Jia Xian (BS006)
+## Crystal Choo Jia Xian (BS006)
 <to do>
   
-##Koh Jia Cheng (BS005)
+## Koh Jia Cheng (BS005)
 <to do>
   
-##Lee Wei Jie (BS005)
+## Lee Wei Jie (BS005)
 <to do>
   
-##Mohammad Shahmizan Bin Sham Affandi (BS006)
+## Mohammad Shahmizan Bin Sham Affandi (BS006)
 <to do>
 
