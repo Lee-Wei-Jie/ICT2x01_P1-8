@@ -27,9 +27,8 @@ git clone https://github.com/Guthixo/ICT2x01_P1-8.git
 ```
 pip install flask
 ```
-4. To start hosting the webpage, change the directory to Webpage in command prompt and enter "python .\main.py" OR click on the "run" button.
+4. To start hosting the webpage, change the directory of the cloned project in command prompt and enter "python .\main.py" OR click on the "run" button.
 ```
-cd Webpage
 python .\main.py
 ```
 
@@ -310,7 +309,9 @@ Some issues identified throughout the entire project were due to the scheduling 
 
 # Reflections
 ## Crystal Choo Jia Xian (BS006)
-<to do>
+In Milestone 3, all the requirements for both Milestones 1 and 2 were put into consideration during the building process of the product for the client. In this Milestone 3, I learned that it is not easy to keep up with a SE project, satisfying all the requirements for a client within the client's deadline. Most of the requirements were difficult to fulfil due to the clashing of schedules SE and IS students. In addition, as the IS solely focuses on the software, we have no idea how the hardware is going to merge with the software created, thus making integrating very difficult. A lot of research had to be done in order to have a functional part in the project.
+
+In conclusion, this project widens my knowledge on Software Engineering with all the detailed SRS that is needed with the estimation time and cost before the project even begins, and how all the details help in the implementation of the codes in the later part of the project to prevent wastage of time and cost, while cost was not part of this project, it is obvious that time was wasted in our project due to the lack of considering of merging software with the hardware.
   
 ## Koh Jia Cheng (BS005)
 I have learnt many different technical abilities from this milestone. As I was the one who tackled the portion on the Whitebox Testing, so I had to incorporate all the different libraries into the current application and make sure I am able to run them in the virtual environment to test the different features and coverage of the code. The initial startup to learn and integrate all the different libraries and also to used them proved to be a very tedious challenge as I have to be able to stimulate the different test conditions for the functions that is in the main file. This mean scouring the internet for documenation, stackoverflow etc to search for some obscure errors.
