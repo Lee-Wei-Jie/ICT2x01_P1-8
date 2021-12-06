@@ -47,7 +47,7 @@ def getdata():
       getflag = 1
       instructions = request.form['message']
       commands = splitLines(instructions)
-      mylist.append(str(instructions))
+      mylist.append(str(commands))
       #print(mylist, file=sys.stderr)
       return "Command==" + commands + "."
    else:
