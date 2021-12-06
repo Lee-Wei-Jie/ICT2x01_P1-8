@@ -75,6 +75,21 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ### USER ACCEPTANCE TESTING
 
+### System Test Case 1
+
+### System Test Case 5
+- ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
+
+![ST5 - Redirect Page to Play](/img/tests/ST5.gif)
+
+### System Test Case 6
+
+### System Test Case 7
+
+### System Test Case 8
+
+### System Test Case 9
+
 ### Login
 - No PIN Specified
 
@@ -100,10 +115,6 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ![Login Test - Success](/img/tests/login-success.gif)
 
-### System Test Case
-- System Test Case 5
-- ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
--![ST5 - Redirect Page to Play](/img/tests/ST5.gif)
 
 ## White-box Testing
 ---
