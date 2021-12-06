@@ -179,14 +179,6 @@ int main(void)
     GPIO_enableInterrupt(GPIO_PORT_P1, GPIO_PIN1);
     //S1 IS TEMPORARY UP ABOVE HERE TO FACILITATE THE PWM
 
-
-    //Generate PWM for the motor (TO BE REMOVED)
-    //CAR_GeneratePWM();
-    //CAR_STATE = STATE_MOVING;
-    //(TO BE REMOVED for the above)
-
-
-
     /*Enabling Interrupts*/
     Interrupt_enableInterrupt(INT_PORT1);       //for S1
     Interrupt_enableInterrupt(INT_PORT6);       //enables interrupt for wheel encoder
@@ -204,26 +196,22 @@ int main(void)
 
     /*Setting up connection*/
 
-
     /*Hard Reset ESP8266*/
     ESP8266_HardReset();
     /*flush reset data, we do this because a lot of data received cannot be printed*/
     UART_Flush(EUSCI_A2_BASE);
     MSPrintf(EUSCI_A0_BASE, "Hard Reset Performed\n\r");
-
-
-
-
-    /*Check UART connection to MSP432*/
-    if (!ESP8266_ChangeMode1())
-    {
-        MSPrintf(EUSCI_A0_BASE, "Failed to Change Mode\r\n");
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
-        //GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
-        /*Trap MSP432 if failed connection*/
-        while (1)
-        ;
+  
+     /*Check UART connection to MSP432*/
+     if (!ESP8266_ChangeMode3())
+     {
+       MSPrintf(EUSCI_A0_BASE, "Failed to Change Mode\r\n");
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN0);
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN1);
+       GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
+       /*Trap MSP432 if failed connection*/
+       while (1)
+       ;
      }
         MSPrintf(EUSCI_A0_BASE, "SoftAP + Station Mode Enabled \n\r");
 
@@ -353,8 +341,18 @@ int main(void)
                 GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
                 break;
         }
-//        PCM_gotoLPM0();
+
+        if (instruction == '.')
+        {
+            UART_Flush(EUSCI_A2_BASE);
+            GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
+            __delay_cycles(4500000);
+            break;
+        }
     }
+
+  }
+
 }
 
 float SR04_GetDistance(void){
@@ -395,12 +393,6 @@ void PORT1_IRQHandler(void)
 
     if(status & GPIO_PIN1) //if there is interrupt on P1.1
     {
-        //pwmConfigLeft.dutyCycle = 3000;
-        //pwmConfigRight.dutyCycle = 3000;
-
-        //Timer_A_generatePWM(TIMER_A0_BASE, &pwmConfigLeft);  //generate the PWM again
-        //Timer_A_generatePWM(TIMER_A0_BASE, &pwmConfigRight); //generate the PWM again
-
         CAR_Forward();
     }
     GPIO_clearInterruptFlag(GPIO_PORT_P1, status);
@@ -451,8 +443,6 @@ void TA1_0_IRQHandler(void){
         printf("Speed: %f cm/s\n", CAR_AverageSpeed);
     }
     else if (CAR_UpTime % 1 == 0 && CAR_STATE == STATE_MOVING){        //Use PID every 1 second
-        NOTCH_LeftCountTotal = 0;
-        NOTCH_RightCountTotal = 0;
         PID_Controller(NOTCH_LeftCountTotal, NOTCH_RightCountTotal);
     }
 
