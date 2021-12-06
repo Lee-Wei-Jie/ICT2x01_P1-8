@@ -28,7 +28,6 @@ Singapore Institute of Technology
             1. `devcar`
       2. `masterwebpage`
          1. `devwebpage`
-            1. `devwebpage`
 
 ### Branches
 
