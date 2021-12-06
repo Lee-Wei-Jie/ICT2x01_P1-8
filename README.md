@@ -76,7 +76,7 @@ Request for a pull, before merging from the new branch to the respective develop
 ### USER ACCEPTANCE TESTING
 
 ### System Test Case 1
--ST1 tests if user are able to access the localhost webpage.
+- ST1 tests if user are able to access the localhost webpage.
 ![ST5 - Redirect Page to Play](/img/tests/ST1.gif)
 
 ### System Test Case 5
