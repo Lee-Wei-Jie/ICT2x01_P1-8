@@ -36,6 +36,8 @@ def splitLines(instr):
          string += "R"
       if i == 'Turn Left':
          string += "L"
+   if string == " ":
+      return "invalid"
    return string
 
 @app.route('/sendInstructions', methods = ['POST','GET'])
