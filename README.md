@@ -77,64 +77,32 @@ Request for a pull, before merging from the new branch to the respective develop
 ---
 <table>
   <tr>
-    <td>ID</td>
-    <td>Test Case</td>
-    <td>Actual Results</td>
-    <td>Pass✔ / Fail❌</td>
-  </tr>
-  <tr>
-    <td>1</td>
     <td><img src="/img/tests/ST1.jpg"/></td>
     <td><img src="/img/tests/ST1.gif"/></td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>2</td>
+  </tr><tr>
     <td><img src="/"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
-  </tr>
-  <tr>
-    <td>3</td>
+  </tr><tr>
     <td><img src="/"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
-  </tr>
-  <tr>
-    <td>4</td>
+  </tr><tr>
     <td><img src="/"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
-  </tr>
-  <tr>
-    <td>5</td>
+  </tr><tr>
     <td><img src="/img/tests/ST5.jpg"/></td>
     <td><img src="/img/tests/ST5.gif"/></td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>6</td>
+  </tr><tr>
     <td><img src="/img/tests/ST6.jpg"/></td>
     <td><img src="/img/tests/ST6.gif"/></td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>7</td>
+  </tr><tr>
     <td><img src="/img/tests/ST7.jpg"/></td>
     <td><img src="/img/tests/ST7.gif"/></td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>8</td>
+  </tr><tr>
     <td><img src="/img/tests/ST8.jpg"/></td>
     <td><img src="/img/tests/ST8.gif"/></td>
-    <td>✔</td>
-  </tr>
-  <tr>
-    <td>9</td>
+  </tr><tr>
     <td><img src="/img/tests/ST9.jpg"/></td>
     <td><img src="/img/tests/ST9.gif"/></td>
-    <td>✔</td>
   </tr>
 </table>
 
@@ -228,6 +196,8 @@ The file that does the testing can be found [documentation](https://docs.pytest.
 <p align="center">
   <img src="https://thumbs.gfycat.com/UltimateBlandCrane-size_restricted.gif" alt="Car" />
 </p>
+
+## Issues Identified
 
 ## Car Demonstration
 ![Car Demo](/img/tests/P2_P7_Demo(New))
