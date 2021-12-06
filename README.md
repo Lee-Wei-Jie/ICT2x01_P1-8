@@ -46,12 +46,6 @@ Request for a pull, before merging from the new branch to the respective develop
 # Testing
 - Black Box Testing
    - UAT
-      - Start Webpage
-      - Enters/redirected to the play page
-      - Set instructions by dragging commands into the field
-      - Press send to send commands over to the car
-      - Return to homepage using the home button
-      - Exits the web program by clicking on the cross icon on the tab
    - Login
       - No Pin Specified
       - Wrong PIN Specified
@@ -102,6 +96,11 @@ Request for a pull, before merging from the new branch to the respective develop
 - Successfully Logged-in
 
 ![Login Test - Success](/img/tests/login-success.gif)
+
+### System Test Case
+- System Test Case 5
+- ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
+-![ST5 - Redirect Page to Play](/img/tests/ST5.gif)
 
 ## White-box Testing
 
