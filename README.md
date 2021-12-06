@@ -25,12 +25,10 @@ Singapore Institute of Technology
 5. Hierarchy breakdown are as such:
    1. `master`
       1. `mastercar`
-            1. `devcarmember`
-            2. `devcarmember`
+            1. `devcar`
       2. `masterwebpage`
          1. `devwebpage`
-            1. `devcarmember`
-            2. `devcarmember`
+            1. `devwebpage`
 
 ### Branches
 
@@ -58,7 +56,18 @@ Request for a pull, before merging from the new branch to the respective develop
 
 
 - White Box Testing
-
+   - A full test suite using pytest library testing for 
+     - Accessing 
+       - Home page
+       - Play page
+         - Split line function
+         - Split line adapter design function
+         - With wrong instructions
+         - With correct instructions
+         - Witn no instructions
+       - Challenge page
+       - Design page
+       - List page
 ## Black Box Testing
 
 ### UAT
@@ -89,6 +98,10 @@ Request for a pull, before merging from the new branch to the respective develop
 ![Login Test - Success](/img/tests/login-success.gif)
 
 ## White-box Testing
+
+- Login Full Test Suite 
+
+![Whitebox Testing - Success](/img/tests/whitebox-testing-allfunctions.gif)
 
 
 
