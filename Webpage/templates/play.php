@@ -41,7 +41,8 @@
             <div name = "fullNamesContainer" style="position: relative; float:left;">
                 <form action="/sendInstructions" method="post">
                     <!--<form action="/action_page.php">-->
-                    <textarea id="instructions" name="message" rows="10" cols="30"></textarea>
+                    <textarea id="instructions" name="message" rows="10" cols="30" style='resize:none'></textarea>
+                    <br>
                     <input type="submit" class="button primary" value="Send!">
                     <input type="button" value="Clear" onclick="eraseText();">
                 </form>
