@@ -306,7 +306,7 @@ As seen below, we will use Postman for these final few coverage (all of which is
 Some issues identified throughout the entire project were due to the scheduling (timetable) of both Information Security and Software Engineering students. As both courses were very busy with each of their relative assessments and assignments, it is very difficult to meet up and complete the project. The timings of both of our classes were also clashing, making it even more difficulty to hold weekly in person meetings to complete the project. As the main objective of this project is to include commands to send to the web page to guide users to solve challenges while teaching critical problem solving and computational thinking skills, our main focus was to ensure commands can be sent from the webpage to the car, which was completed. 
 
 ## Car Demonstration
-![Car Demo](/img/tests/P2_P7_DemoNew.avi)
+![Car Demo](/img/tests/P2_P7_DemoNew.mp4)
 
 # Reflections
 ## Crystal Choo Jia Xian (BS006)
