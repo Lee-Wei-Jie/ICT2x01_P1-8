@@ -30,12 +30,14 @@ def splitLines(instr):
    for i in lines:
       if i == 'Move Forward':
          string += "F"
-      if i == 'Move Backward':
+      elif i == 'Move Backward':
          string += "B"
-      if i == 'Turn Right':
+      elif i == 'Turn Right':
          string += "R"
-      if i == 'Turn Left':
+      elif i == 'Turn Left':
          string += "L"
+      else:
+         return "invalid"
    if string == " ":
       return "invalid"
    return string
