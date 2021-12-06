@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://thumbs.gfycat.com/IdenticalFarawayAfricangoldencat-size_restricted.gif" alt="Car" />
+</p>
+
 # ICT2x01 Intro. to Software Engineering
 Singapore Institute of Technology
 ## Meet the Team
