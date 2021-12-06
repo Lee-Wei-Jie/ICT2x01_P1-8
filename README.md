@@ -15,15 +15,12 @@ Singapore Institute of Technology
 - Flask 
 - Python >= 3.7.1
 
-
-### Car
 ### Installation Guide 
 1. Clone the repository
-2. Download the necessary python version available
-3. In the command prompt, enter "pip install flask" followed by enter key
-4. To start hosting the webpage, enter the current project directory in command prompt and enter "python ./main.py" OR click on the "run" button.
-
-### Webpage
+![GitClone - git clone the repository](/img/tests/gitClone.gif)
+3. Download the necessary python version available
+4. In the command prompt, enter "pip install flask" followed by enter key
+5. To start hosting the webpage, enter the current project directory in command prompt and enter "python ./main.py" OR click on the "run" button.
 
 # Workflow
 1. `master` branch will be our *baseline* branch for pull request of both `mastercar` and `masterwebpage`
