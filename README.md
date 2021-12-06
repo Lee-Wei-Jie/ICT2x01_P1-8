@@ -73,6 +73,36 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ### USER ACCEPTANCE TESTING
 ---
+<table>
+  <tr>
+    <td><img src="/img/tests/ST1.jpg"/></td>
+    <td><img src="/img/tests/ST1.gif"/></td>
+  </tr><tr>
+    <td><img src="/"/></td>
+    <td><img src="/"/></td>
+  </tr><tr>
+    <td><img src="/"/></td>
+    <td><img src="/"/></td>
+  </tr><tr>
+    <td><img src="/"/></td>
+    <td><img src="/"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST5.jpg"/></td>
+    <td><img src="/img/tests/ST5.gif"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST6.jpg"/></td>
+    <td><img src="/img/tests/ST6.gif"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST7.jpg"/></td>
+    <td><img src="/img/tests/ST7.gif"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST8.jpg"/></td>
+    <td><img src="/img/tests/ST8.gif"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST9.jpg"/></td>
+    <td><img src="/img/tests/ST9.gif"/></td>
+  </tr>
+</table>
 
 ### System Test Case 1
 ![ST1 - Starting the Webpage](/img/tests/ST1.jpg)
