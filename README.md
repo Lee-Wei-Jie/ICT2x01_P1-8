@@ -95,8 +95,14 @@ Request for a pull, before merging from the new branch to the respective develop
 ![ST7 - Set Instructions to send to the Car](/img/tests/ST7.gif)
 
 ### System Test Case 8
+- ST8 test if user is able to enter the homapage using dedicated home button.
+
+![ST9 - Terminated the web application](/img/tests/ST8.gif)
 
 ### System Test Case 9
+- ST9 test if user is able to exit the app.
+
+![ST9 - Terminated the web application](/img/tests/ST9.gif)
 
 ### Login
 - No PIN Specified
