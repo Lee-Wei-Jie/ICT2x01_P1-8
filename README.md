@@ -130,6 +130,7 @@ Request for a pull, before merging from the new branch to the respective develop
   </tr>
 </table>
 
+<!--
 ### System Test Case 1
 ![ST1 - Starting the Webpage](/img/tests/ST1.jpg)
 - ST1 tests if user are able to access the localhost webpage.
@@ -160,10 +161,43 @@ Request for a pull, before merging from the new branch to the respective develop
 - ST9 test if user is able to exit the app.
 
 ![ST9 - Terminated the web application](/img/tests/ST9.gif)
+-->
 
 ### LOGIN
 ---
+<table>
+  <tr>
+    <td>Test Case</td>
+    <td>Actual Results</td>
+    <td>Pass✔/Fail❌</td>
+  </tr>
+  <tr>
+    <td>No PIN Specified</td>
+    <td><img src="/img/tests/login-no-pin.gif"/></td>
+    <td>✔</td>
+  </tr><tr>
+    <td>Wrong PIN Specified</td>
+    <td><img src="/img/tests/login-wrong-pin.gif"/></td>
+    <td>✔</td>
+  </tr><tr>
+    <td>Maximum Limit Exhausted (PIN Lockout)</td>
+    <td><img src="/img/tests/login-max-attempts.gif"/></td>
+    <td>✔</td>
+  </tr><tr>
+    <td>Login Attempt After Maximum Limit Exhausted (PIN Lockout)</td>
+    <td><img src="/img/tests/login-post-limit-attempt.gif"/></td>
+    <td>✔</td>
+  </tr><tr>
+    <td>Clear Field</td>
+    <td><img src="/img/tests/login-clear-fields.gif"/></td>
+    <td>✔</td>
+  </tr><tr>
+    <td>Successfully Logged-in</td>
+    <td><img src="/img/tests/login-success.gif"/></td>
+    <td>✔</td>
+</table>
 
+<!--
 - No PIN Specified
 
 ![Login Test - No PIN](/img/tests/login-no-pin.gif)
@@ -187,7 +221,7 @@ Request for a pull, before merging from the new branch to the respective develop
 - Successfully Logged-in
 
 ![Login Test - Success](/img/tests/login-success.gif)
-
+-->
 
 ## White-box Testing
 
