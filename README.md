@@ -92,6 +92,9 @@ Request for a pull, before merging from the new branch to the respective develop
 ### System Test Case 7
 
 ### System Test Case 8
+- ST8 test for homepage redirection back to the homepage, by using the dedicated homepage button.
+
+![ST8 - Redirect to Homepage](/img/tests/ST8.gif)
 
 ### System Test Case 9
 
