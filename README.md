@@ -255,7 +255,7 @@ You can refer to the pytest [documentation](https://docs.pytest.org/en/6.2.x/con
 
 <add the env examples>
 
-You can run the test using this command to:
+You can run the test using this command:
 
 ```
 pytest -v
@@ -271,7 +271,6 @@ py.test test_fullsuite.py --cov=main --cov-report=html
 
 
 ### Coverage Report
----
 ![Whitebox Testing Coverage](/img/tests/whitebox-testing-coveragereport.PNG)
 
 ![Whitebox Testing Coverage 20](/img/tests/whitebox-testing-coveragereport-20.PNG)
