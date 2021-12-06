@@ -44,15 +44,18 @@ Request for a pull, before merging from the new branch to the respective develop
 # Testing
 
 ## UAT
-## White-box Testing
 ### Login
 - No PIN Specified
 
 ![Login Test - No PIN](/img/tests/login-no-pin.gif)
 
 - Wrong PIN Specified
+
+![Login Test - Wrong PIN](/img/tests/login-wrong-pin.gif)
+
 - Maximum Limit Exhausted
 - Login Attempt After Maximum Limit Exhausted
 - Successfully Logged-in
 
+## White-box Testing
 # References
