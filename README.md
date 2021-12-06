@@ -70,12 +70,13 @@ Request for a pull, before merging from the new branch to the respective develop
 
 
 ## Black Box Testing
----
 
 ### USER ACCEPTANCE TESTING
+---
 
 ### System Test Case 1
 - ST1 tests if user are able to access the localhost webpage.
+
 ![ST1 - Starting the Webpage](/img/tests/ST1.gif)
 
 ### System Test Case 5
