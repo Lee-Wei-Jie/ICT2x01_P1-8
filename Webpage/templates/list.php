@@ -16,6 +16,10 @@
                 transition: background-color .4s ease;
                 background-color: #F2A007;
             }
+            table, td, th{
+                text-align:center;
+                vertical-align:middle;
+            }
         </style>
     </head>
     <body class="is-article-visible">
@@ -26,14 +30,14 @@
                         <h2 class="major">Available Mazes</h2>
                         <div class="table-wrapper">
                             <table class="alt">
-                                <thead><tr><th>Maze Name</th><th>Difficulty</th><th>Created by:</th></tr></thead>
+                                <thead><tr><th>Maze Name</th><th>Difficulty</th><th>Maze Showcase:</th></tr></thead>
                                 <tbody>
-                                    <tr><td class="link"><a href="#pre1">Preset 1</a></td><td>Easy</td><td>CoolKid08</td></tr>
-                                    <tr><td class="link"><a href="#pre2">Preset 2</a></td><td>Normal</td><td>Miss Goh</td></tr>
-                                    <tr><td class="link"><a href="#pre3">Preset 3</a></td><td>Normal</td><td>Cryoatic</td></tr>
-                                    <tr><td class="link"><a href="#pre4">Preset 4</a></td><td>Hard</td><td>Pewdiepie</td></tr>
+                                    <tr><td class="link"><a href="#pre1">Preset 1</a></td><td>Easy</td><td><img src="static/mazes/440011.png"></td></tr>
+                                    <tr><td class="link"><a href="#pre2">Preset 2</a></td><td>Normal</td><td><img src="static/mazes/550011.png"></td></tr>
+                                    <tr><td class="link"><a href="#pre3">Preset 3</a></td><td>Normal</td><td><img src="static/mazes/550022.png"></td></tr>
+                                    <tr><td class="link"><a href="#pre4">Preset 4</a></td><td>Hard</td><td><img src="static/mazes/660011.png"></td></tr>
                                 </tbody>
-                                <tfoot><tr><td colspan="2"></td><td style="text-align:right;"><a href="/index">Return Home</a></td></tr></tfoot>
+                                <tfoot><tr><td colspan="2"></td><td style="text-align:right;"><a href="/">Return Home</a></td></tr></tfoot>
                             </table>
                         </div>
                     </section>
