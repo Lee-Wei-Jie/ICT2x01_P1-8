@@ -38,8 +38,6 @@ def splitLines(instr):
          string += "L"
       else:
          return "invalid"
-   if string == " ":
-      return "invalid"
    return string
 
 @app.route('/sendInstructions', methods = ['POST','GET'])
