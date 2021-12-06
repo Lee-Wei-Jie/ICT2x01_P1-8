@@ -254,9 +254,9 @@ py.test test_fullsuite.py --cov=main --cov-report=html
 
 ### Coverage Report
 ---
-![Whitebox Testing Coverage](/img/tests/whitebox-testing-coveragereport.png)
+![Whitebox Testing Coverage](/img/tests/whitebox-testing-coveragereport.PNG)
 
-![Whitebox Testing Coverage 20](/img/tests/whitebox-testing-coveragereport-20.png)
+![Whitebox Testing Coverage 20](/img/tests/whitebox-testing-coveragereport-20.PNG)
 
 For the ```getdata()```, we are unable to generate a test case using codes as because of the nature of the coding structure. The function utilizes variables **locally** to the function and is **not parametrized**, hence we are not able pass the correct information to perform a test.
 
