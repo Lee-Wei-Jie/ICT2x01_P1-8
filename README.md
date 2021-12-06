@@ -68,7 +68,7 @@ Request for a pull, before merging from the new branch to the respective develop
        - Design page
        - List page
 
-- Car Demostration
+- Car Demonstration
 
 
 ## Black Box Testing
@@ -197,7 +197,7 @@ The file that does the testing can be found [documentation](https://docs.pytest.
   <img src="https://thumbs.gfycat.com/UltimateBlandCrane-size_restricted.gif" alt="Car" />
 </p>
 
-## Car Demostration
+## Car Demonstration
 ![Car Demo](/img/tests/P2_P7_Demo(New))
 
 # Reflections
