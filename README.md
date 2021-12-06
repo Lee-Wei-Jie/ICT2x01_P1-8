@@ -53,11 +53,14 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ![Login Test - Wrong PIN](/img/tests/login-wrong-pin.gif)
 
-- Maximum Limit Exhausted
+- Maximum Limit Exhausted (PIN Lockout)
 
 ![Login Test - Max Attempts](/img/tests/login-max-attempts.gif)
 
-- Login Attempt After Maximum Limit Exhausted
+- Login Attempt After Maximum Limit Exhausted (PIN Lockout)
+
+![Login Test - Max Attempts](/img/tests/login-post-limit-attempt.gif)
+
 - Successfully Logged-in
 
 ## White-box Testing
