@@ -77,7 +77,7 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ### System Test Case 1
 - ST1 tests if user are able to access the localhost webpage.
-![ST5 - Redirect Page to Play](/img/tests/ST1.gif)
+![ST1 - Starting the Webpage](/img/tests/ST1.gif)
 
 ### System Test Case 5
 - ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
