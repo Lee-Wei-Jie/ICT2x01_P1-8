@@ -93,7 +93,7 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ## Black Box Testing
 ### SYSTEM STATE DIAGRAM
-![System State Diagram](/img/tests/STD.PNG)
+![System State Diagram](/img/tests/STD.png)
 ### USER ACCEPTANCE TESTING
 ---
 <table>
