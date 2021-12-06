@@ -90,11 +90,11 @@ Request for a pull, before merging from the new branch to the respective develop
 ![ST6 - Drag & Drop Commands to send to Car](/img/tests/ST6.gif)
 
 ### System Test Case 7
+- ST7 test for user setting up instructions to send to the car. When the user press 'Sent!', the screen is suppose to be the commands sending through.
+
+![ST7 - Set Instructions to send to the Car](/img/tests/ST7.gif)
 
 ### System Test Case 8
-- ST8 test for homepage redirection back to the homepage, by using the dedicated homepage button.
-
-![ST8 - Redirect to Homepage](/img/tests/ST8.gif)
 
 ### System Test Case 9
 
