@@ -11,7 +11,13 @@ Singapore Institute of Technology
 - Mohammad Shahmizan Bin Sham Affandi (BS006)
 
 ## Car Demonstration
-[![Car Demo Video]]({https://youtu.be/hTyDdC8DkpY} "Car Demo")
+<object width="425" height="350">
+  <param name="movie" value="https://www.youtube.com/watch?v=hTyDdC8DkpY" />
+  <param name="wmode" value="transparent" />
+  <embed src="https://www.youtube.com/watch?v=hTyDdC8DkpY"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 
 # Getting Started
 ## Dependencies
