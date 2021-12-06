@@ -42,8 +42,23 @@ Committed code should be properly reviewed by another party of the team.
 Request for a pull, before merging from the new branch to the respective development branches.
 
 # Testing
+- Black Box Testing
+   - UAT
+   - Login
+      - No Pin Specified
+      - Wrong PIN Specified
+      - Maximum Limit Exhausted (PIN Lockout)
+      - Login Attempt After Maximum Limit Exhausted (PIN Lockout)
+      - Clear Field
+      - Successfully Logged-in
 
-## UAT
+
+- White Box Testing
+
+## Black Box Testing
+
+### UAT
+
 ### Login
 - No PIN Specified
 
@@ -59,15 +74,15 @@ Request for a pull, before merging from the new branch to the respective develop
 
 - Login Attempt After Maximum Limit Exhausted (PIN Lockout)
 
-![Login Test - Max Attempts](/img/tests/login-post-limit-attempt.gif)
+![Login Test - Post Max Attempts](/img/tests/login-post-limit-attempt.gif)
 
 - Clear Field
 
-![Login Test - Max Attempts](/img/tests/login-clear-fields.gif)
+![Login Test - Clearing Field](/img/tests/login-clear-fields.gif)
 
 - Successfully Logged-in
 
-![Login Test - Max Attempts](/img/tests/login-success.gif)
+![Login Test - Success](/img/tests/login-success.gif)
 
 ## White-box Testing
 # References
