@@ -228,26 +228,44 @@ Request for a pull, before merging from the new branch to the respective develop
 First, ensure that you are in the ```Webpage``` folder.
 
 Ensure that the virtual environment is activated to be used as pytest is saved in venv.
+![Whitebox Testing venv](/img/tests/whitebox-testing-venv.PNG)
 
-You can run the test using this command:
+All the test are run through in this python file: ```Webpage/test_fullsuite.py```
+
+You can refer to the pytest [documentation](https://docs.pytest.org/en/6.2.x/contents.html "here").
+
+<add the env examples>
+
+You can run the test using this command to:
+
 ```
 pytest -v
 ```
-Alternatively, you can use to get the coverage:
+![Whitebox Testing Pytest](/img/tests/whitebox-testing-allfunctions.gif)
+
+----
+
+Alternatively, you can use to get the coverage whereby you can then view it in a html file by opening it on a browser:
 ```
-pytest-cov
+py.test test_fullsuite.py --cov=main --cov-report=html
 ```
-You can refer to the library documentation 
-
-The file that does the testing can be found [documentation](https://docs.pytest.org/en/6.2.x/contents.html "here"):
-
-```Webpage/test_fullsuite.py```
+![Whitebox Testing Coverage](/img/tests/whitebox-testing-coverage.gif)
 
 
+### Coverage Report
+---
+![Whitebox Testing Coverage](/img/tests/whitebox-testing-coveragereport.png)
 
-### Full Test Suite testing all endpoints and functions
+![Whitebox Testing Coverage 20](/img/tests/whitebox-testing-coveragereport-20.png)
 
-![Whitebox Testing - Success](/img/tests/whitebox-testing-allfunctions.gif)
+For the ```getdata()```, we are unable to generate a test case using codes as because of the nature of the coding structure. The function utilizes variables **locally** to the function and is **not parametrized**, hence we are not able pass the correct information to perform a test.
+
+We then used another application to test out this function's coverage. You can see that 
+
+
+
+
+
 
 
 
