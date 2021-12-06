@@ -46,6 +46,12 @@ Request for a pull, before merging from the new branch to the respective develop
 # Testing
 - Black Box Testing
    - UAT
+      - Start Webpage
+      - Enters/redirected to the play page
+      - Set instructions by dragging commands into the field
+      - Press send to send commands over to the car
+      - Return to homepage using the home button
+      - Exits the web program by clicking on the cross icon on the tab
    - Login
       - No Pin Specified
       - Wrong PIN Specified
