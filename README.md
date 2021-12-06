@@ -89,8 +89,6 @@ Request for a pull, before merging from the new branch to the respective develop
        - Design page
        - List page
 
-- Car Demonstration
-
 
 ## Black Box Testing
 
@@ -101,7 +99,7 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>ID</td>
     <td>State Test</td>
     <td>Actual Results</td>
-    <td>Pass✔/N.A.</td>
+    <td>Pass✔ / N.A.</td>
   </tr>
   <tr>
     <td>1</td>
@@ -190,7 +188,7 @@ Request for a pull, before merging from the new branch to the respective develop
   <tr>
     <td>Test Case</td>
     <td>Actual Results</td>
-    <td>Pass✔/Fail❌</td>
+    <td>Pass✔ / Fail❌</td>
   </tr>
   <tr>
     <td>No PIN Specified</td>
