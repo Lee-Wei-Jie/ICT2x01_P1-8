@@ -54,6 +54,9 @@ Request for a pull, before merging from the new branch to the respective develop
 ![Login Test - Wrong PIN](/img/tests/login-wrong-pin.gif)
 
 - Maximum Limit Exhausted
+
+![Login Test - Max Attempts](/img/tests/login-max-attempts.gif)
+
 - Login Attempt After Maximum Limit Exhausted
 - Successfully Logged-in
 
