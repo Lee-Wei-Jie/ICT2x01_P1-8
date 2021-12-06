@@ -80,7 +80,7 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>ID</td>
     <td>State Test</td>
     <td>Actual Results</td>
-    <td>Pass✔/Fail❌</td>
+    <td>Pass✔</td>
   </tr>
   <tr>
     <td>1</td>
@@ -91,17 +91,17 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>2</td>
     <td><img src="/img/tests/ST2.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>3</td>
     <td><img src="/img/tests/ST3.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>4</td>
     <td><img src="/img/tests/ST4.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>5</td>
     <td><img src="/img/tests/ST5.jpg"/></td>
@@ -169,7 +169,7 @@ Request for a pull, before merging from the new branch to the respective develop
   <tr>
     <td>Test Case</td>
     <td>Actual Results</td>
-    <td>Pass✔/Fail❌</td>
+    <td>Pass✔</td>
   </tr>
   <tr>
     <td>No PIN Specified</td>
