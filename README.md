@@ -10,6 +10,9 @@ Singapore Institute of Technology
 - Lee Wei Jie (BS005)
 - Mohammad Shahmizan Bin Sham Affandi (BS006)
 
+## Car Demonstration
+![Car Demo](/img/tests/P2_T7_DemoNew.mp4)
+
 # Getting Started
 ## Dependencies
 - Flask 
@@ -27,8 +30,9 @@ git clone https://github.com/Guthixo/ICT2x01_P1-8.git
 ```
 pip install flask
 ```
-4. To start hosting the webpage, change the directory of the cloned project in command prompt and enter "python .\main.py" OR click on the "run" button.
+4. hange the directory of the cloned project in command prompt and enter "cd Webpage" to go into the directory of the Webpage. To start hosting the webpage, enter "python .\main.py" OR click on the "run" button.
 ```
+cd Webpage
 python .\main.py
 ```
 
@@ -295,8 +299,6 @@ As seen below, we will use Postman for these final few coverage (all of which is
 # Issues Identified
 Some issues identified throughout the entire project were due to the scheduling (timetable) of both Information Security and Software Engineering students. As both courses were very busy with each of their relative assessments and assignments, it is very difficult to meet up and complete the project. The timings of both of our classes were also clashing, making it even more difficulty to hold weekly in person meetings to complete the project. As the main objective of this project is to include commands to send to the web page to guide users to solve challenges while teaching critical problem solving and computational thinking skills, our main focus was to ensure commands can be sent from the webpage to the car, which was completed. 
 
-## Car Demonstration
-![Car Demo](/img/tests/P2_T7_DemoNew.mp4)
 
 # Reflections
 ## Crystal Choo Jia Xian (BS006)
