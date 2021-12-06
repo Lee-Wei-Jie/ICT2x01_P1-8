@@ -261,9 +261,12 @@ py.test test_fullsuite.py --cov=main --cov-report=html
 For the ```getdata()```, we are unable to generate a test case using codes as because of the nature of the coding structure. The function utilizes variables **locally** to the function and is **not parametrized**, hence we are not able pass the correct information to perform a test.
 
 We then used another application to test out this function's coverage. There are only ```3 branches``` to be covered. They are:
-- POST
+- POST 
+  - Line ```46-51```
 - GET (with data)
+  - Line ```53-55```
 - GET (without data)
+  - Line ```56```
 
 
 
