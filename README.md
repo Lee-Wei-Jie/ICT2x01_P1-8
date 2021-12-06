@@ -12,7 +12,7 @@ Singapore Institute of Technology
 
 ## Car Demonstration
 ![Car Demo](/img/tests/P2_T7_DemoNew.mp4)
--Car Demo Video link here:https://youtu.be/hTyDdC8DkpY
+- Car Demo Video link here:https://youtu.be/hTyDdC8DkpY
 
 # Getting Started
 ## Dependencies
