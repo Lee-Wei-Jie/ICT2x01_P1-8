@@ -295,5 +295,9 @@ Some issues identified throughout the entire project were due to the scheduling 
 <to do>
   
 ## Mohammad Shahmizan Bin Sham Affandi (BS006)
-<to do>
+The progress I made on this Milestone 3 was definitely not up to the standards of the previous Milestones. My expertise was lacking, the team's motivation was low, and with such high expectations, the stars were never aligned from the start.
+  
+Between conducting research on how to make something work, aligning to the Software Engineering principles taught, all while trying to satisfy the deliverables of the client, lies my team stretched thin.
+  
+Overall this project was truly an experience to show the strains of a typical Software Engineering project process. Making references back to the first few weeks of Professor Alex's lectures, I am finally able to wrap my head around the reality on the success, but more particularly the failure rates of high-profile SE projects. Whatever the outcome of this project / Milestone, it's all part of the learning process. <i> - Shahmizan </i>
 
