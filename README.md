@@ -68,9 +68,12 @@ Request for a pull, before merging from the new branch to the respective develop
        - Challenge page
        - Design page
        - List page
-## Black Box Testing
 
-### UAT
+
+## Black Box Testing
+---
+
+### USER ACCEPTANCE TESTING
 
 ### Login
 - No PIN Specified
@@ -98,8 +101,18 @@ Request for a pull, before merging from the new branch to the respective develop
 ![Login Test - Success](/img/tests/login-success.gif)
 
 ## White-box Testing
+---
 
-- Full Test Suite for the entire file
+First, ensure that you are in the ```Webpage``` folder.
+
+Ensure that the virtual environment is activated to be used as pytest is saved in venv.
+
+You can run the test using this command:
+```
+pytest -v
+```
+
+### Full Test Suite testing all endpoints and functions
 
 ![Whitebox Testing - Success](/img/tests/whitebox-testing-allfunctions.gif)
 
