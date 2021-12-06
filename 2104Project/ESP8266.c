@@ -100,7 +100,6 @@ bool ESP8266_AvailableAPs(void)
 bool ESP8266_ChangeMode3(void)
 {
     UART_Printf(EUSCI_A2_BASE, "AT+CWMODE=3\r\n");
-
     __delay_cycles(24000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
@@ -118,7 +117,6 @@ bool ESP8266_ChangeMode3(void)
 bool ESP8266_SetSoftAP(void)
 {
     UART_Printf(EUSCI_A2_BASE, "AT+CWSAP=\"Guthixo's esp8266\",\"Guthixo1\",5,3\r\n");
-
     __delay_cycles(24000000);
     if (!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
@@ -135,7 +133,6 @@ bool ESP8266_SetSoftAP(void)
 bool ESP8266_ConnectToAP(char *SSID, char *Password)
 {
     UART_Printf(EUSCI_A2_BASE, "%s=\"%s\",\"%s\"\r\n", AT_CWJAP, SSID, Password);
-
 
     __delay_cycles(24000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
@@ -184,7 +181,6 @@ bool ESP8266_EnableMultipleConnections(bool Enable)
 bool ESP8266_MultiMode(void)
 {
     UART_Printf(EUSCI_A2_BASE, " AT+CIPMUX=1\r\n");
-
     __delay_cycles(10000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
@@ -198,7 +194,6 @@ bool ESP8266_MultiMode(void)
 
     return true;
 }
-
 
 bool ESP8266_ListInformation(void)
 {
@@ -238,7 +233,6 @@ bool ESP8266_EstablishConnection(char ID, uint8_t type, char *address, char *por
     MSPrintf(EUSCI_A2_BASE, "%s=%c,\"%s\",\"%s\",%s\r\n", AT_CIPSTART, ID, ct, address, port);
 
     __delay_cycles(6000000);
-
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -273,7 +267,7 @@ bool ESP8266_SendData(char ID, char *Data, uint32_t DataSize)
 
     UART_Printf(EUSCI_A2_BASE, Data);
 
-    __delay_cycles(6000000);//48000000
+    __delay_cycles(48000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -320,8 +314,6 @@ void ESP8266_HardReset(void)
     __delay_cycles(3000000);
 
     MAP_GPIO_setOutputHighOnPin(RESET_PORT, RESET_PIN);
-
-    __delay_cycles(6000000);
 }
 
 
