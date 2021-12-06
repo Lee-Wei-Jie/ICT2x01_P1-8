@@ -100,7 +100,7 @@ bool ESP8266_AvailableAPs(void)
 bool ESP8266_ChangeMode3(void)
 {
     UART_Printf(EUSCI_A2_BASE, "AT+CWMODE=3\r\n");
-    __delay_cycles(24000000);//48000000
+    __delay_cycles(24000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -117,7 +117,7 @@ bool ESP8266_ChangeMode3(void)
 bool ESP8266_SetSoftAP(void)
 {
     UART_Printf(EUSCI_A2_BASE, "AT+CWSAP=\"Guthixo's esp8266\",\"Guthixo1\",5,3\r\n");
-    __delay_cycles(24000000);//48000000
+    __delay_cycles(24000000);
     if (!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -134,7 +134,7 @@ bool ESP8266_ConnectToAP(char *SSID, char *Password)
 {
     UART_Printf(EUSCI_A2_BASE, "%s=\"%s\",\"%s\"\r\n", AT_CWJAP, SSID, Password);
 
-    __delay_cycles(24000000);//48000000
+    __delay_cycles(24000000);
 
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
@@ -182,7 +182,7 @@ bool ESP8266_EnableMultipleConnections(bool Enable)
 bool ESP8266_MultiMode(void)
 {
     UART_Printf(EUSCI_A2_BASE, " AT+CIPMUX=1\r\n");
-    __delay_cycles(10000000);//12000000
+    __delay_cycles(10000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -233,7 +233,7 @@ bool ESP8266_EstablishConnection(char ID, uint8_t type, char *address, char *por
 
     MSPrintf(EUSCI_A2_BASE, "%s=%c,\"%s\",\"%s\",%s\r\n", AT_CIPSTART, ID, ct, address, port);
 
-    __delay_cycles(6000000);//24000000
+    __delay_cycles(6000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -253,9 +253,9 @@ bool ESP8266_SendData(char ID, char *Data, uint32_t DataSize)
     char size[5];
 
     ltoa(DataSize, size, 10);
-    UART_Printf(EUSCI_A2_BASE, "%s=%c,%s\r\n", AT_CIPSEND, ID, size); //"%s=%c,%s\r\n", AT_CIPSEND, ID, size); "%s=%s\r\n", AT_CIPSEND, size);
+    UART_Printf(EUSCI_A2_BASE, "%s=%c,%s\r\n", AT_CIPSEND, ID, size);
 
-    __delay_cycles(3000000);//24000000
+    __delay_cycles(3000000);
     if(!ESP8266_WaitForAnswer(ESP8266_RECEIVE_TRIES))
     {
         return false;
@@ -274,10 +274,6 @@ bool ESP8266_SendData(char ID, char *Data, uint32_t DataSize)
         return false;
     }
 
-//    if(strstr(ESP8266_Buffer, "+IPD") == NULL)
-//    {
-//        return false;
-//    }
 
     if(strstr(ESP8266_Buffer, "OK") == NULL)
     {

@@ -177,14 +177,6 @@ int main(void)
     GPIO_enableInterrupt(GPIO_PORT_P1, GPIO_PIN1);
     //S1 IS TEMPORARY UP ABOVE HERE TO FACILITATE THE PWM
 
-
-    //Generate PWM for the motor (TO BE REMOVED)
-    //CAR_GeneratePWM();
-    //CAR_STATE = STATE_MOVING;
-    //(TO BE REMOVED for the above)
-
-
-
     /*Enabling Interrupts*/
     Interrupt_enableInterrupt(INT_PORT1);       //for S1
     Interrupt_enableInterrupt(INT_PORT6);       //enables interrupt for wheel encoder
@@ -202,7 +194,6 @@ int main(void)
 
     /*Setting up connection*/
 
-
     /*Hard Reset ESP8266*/
     ESP8266_HardReset();
     __delay_cycles(6000000);
@@ -210,8 +201,6 @@ int main(void)
     UART_Flush(EUSCI_A2_BASE);
     __delay_cycles(3000000);
     MSPrintf(EUSCI_A0_BASE, "Hard Reset Performed\n\r");
-
-
 
 
      /*Check UART connection to MSP432*/
@@ -360,12 +349,12 @@ int main(void)
         {
             UART_Flush(EUSCI_A2_BASE);
             GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN1);
-            __delay_cycles(4500000);//12000000 is working
+            __delay_cycles(4500000);
             break;
         }
     }
 
-  } //end while
+  }
 
 }
 
@@ -407,12 +396,6 @@ void PORT1_IRQHandler(void)
 
     if(status & GPIO_PIN1) //if there is interrupt on P1.1
     {
-        //pwmConfigLeft.dutyCycle = 3000;
-        //pwmConfigRight.dutyCycle = 3000;
-
-        //Timer_A_generatePWM(TIMER_A0_BASE, &pwmConfigLeft);  //generate the PWM again
-        //Timer_A_generatePWM(TIMER_A0_BASE, &pwmConfigRight); //generate the PWM again
-
         CAR_Forward();
     }
     GPIO_clearInterruptFlag(GPIO_PORT_P1, status);
@@ -463,8 +446,7 @@ void TA1_0_IRQHandler(void){
         printf("Speed: %f cm/s\n", CAR_AverageSpeed);
     }
     else if (CAR_UpTime % 1 == 0 && CAR_STATE == STATE_MOVING){        //Use PID every 1 second
-//        NOTCH_LeftCountTotal = 0;
-//        NOTCH_RightCountTotal = 0;
+
         PID_Controller(NOTCH_LeftCountTotal, NOTCH_RightCountTotal);
     }
 

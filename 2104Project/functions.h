@@ -97,7 +97,7 @@ void CAR_InitializeRightMotor(void){
     /*Configuring P2.5 as PWM (PRIMARY MODULE FUNCTION for PWM)*/
     GPIO_setAsPeripheralModuleFunctionOutputPin(GPIO_PORT_P2, GPIO_PIN5, GPIO_PRIMARY_MODULE_FUNCTION);
 
-    pwmConfigRight.dutyCycle = 4000;//3000
+    pwmConfigRight.dutyCycle = 4000;
 }
 
 //Generate PWM for car
@@ -143,13 +143,6 @@ void CAR_TurnRight(void){
     GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN0);    //P4.0 LOW
     GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN2);   //P4.2 HIGH
     CAR_GeneratePWM();
-
-
-    /****SWAP BACK TO NORMAL****/
-//    CAR_InitializeLeftMotor();
-//    CAR_InitializeRightMotor();
-
-    //CAR_GeneratePWM();
     CAR_SetState(STATE_CONNECTED);
 }
 
@@ -159,16 +152,13 @@ void CAR_TurnLeft(void){
     CAR_SetState(STATE_TURNINGLEFT);
     /****SWAP OUTPUT SIDE****/
     //RIGHT WHEEL turns only
-    pwmConfigRight.dutyCycle = 3300;//3000
+    pwmConfigRight.dutyCycle = 3300;
     //LEFT WHEEL don't move
-    pwmConfigLeft.dutyCycle = 0;//500
+    pwmConfigLeft.dutyCycle = 0;
     /*For right wheel to move forward*/
-    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN2);
-    GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN0);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN2);    //P4.2 LOW
+    GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN0);   //P4.0 HIGH
     CAR_GeneratePWM();
-
-
-    //CAR_GeneratePWM();
     CAR_SetState(STATE_CONNECTED);
 }
 
@@ -179,23 +169,19 @@ int PID_Controller(int leftnotch, int rightnotch){
         return 1;
     }
     if (leftnotch != rightnotch){
-        if(leftnotch > rightnotch){ //Right side slower
-            //derivative = leftnotch - rightnotch;
+        if(leftnotch > rightnotch){
             //boost right side
             pwmConfigRight.dutyCycle += 250;
             CAR_GeneratePWM();
         }
-        else if(leftnotch < rightnotch){ //Left side slower
-            //derivative = rightnotch - leftnotch;
+        else if(leftnotch < rightnotch){
             //boost LEFT side
             pwmConfigLeft.dutyCycle += 250;
             CAR_GeneratePWM();
         }
     }
     else if (leftnotch == rightnotch){
-        //CAR_InitializeLeftMotor();
-        //CAR_InitializeRightMotor();
-        //CAR_GeneratePWM();
+
     }
     return 1;       //normal wheel situation
 }
