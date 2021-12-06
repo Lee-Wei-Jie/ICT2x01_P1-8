@@ -9,7 +9,7 @@
         <noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
         <style>
             #instructionsList {
-                list-style-type: none;      /* Removes the list dot */
+                list-style-type: none;
                 padding-left: 0px;
             }
             li{
@@ -33,7 +33,6 @@
                     <li draggable="true">Move Backward</li>
                     <li draggable="true">Turn Right</li>
                     <li draggable="true">Turn Left</li>
-                    <li draggable="true">Loop</li>
                 </ul>
 		<a href="/" id="homeBtn" class="button primary" draggable="false">☰ Home</a>
             </div>
