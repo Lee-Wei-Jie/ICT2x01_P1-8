@@ -11,7 +11,7 @@ Singapore Institute of Technology
 - Mohammad Shahmizan Bin Sham Affandi (BS006)
 
 ## Car Demonstration
-![Car Demo](https://youtu.be/hTyDdC8DkpY)
+[![Car Demo Video]]({https://youtu.be/hTyDdC8DkpY} "Car Demo")
 
 # Getting Started
 ## Dependencies
