@@ -312,7 +312,14 @@ This have made me learned the different competencies when it comes to whitebox t
 The project has taught many other intricacies such as using github and also following a developmental flow to finally create this application. This could be applied to the real world scenarios next time where there is also a good chance that people use github and also follow similar workflow as well. Having a more familiar flow which I can look back to and grasp and idea of is really comforting in the grand scheme of things. Though we cannot be fully prepared for what's to come, I think this has shed quite some good light on how Software Engineering works.
   
 ## Lee Wei Jie (BS005)
-<to do>
+For Milestone 3, we’ve worked together, and applied concepts learnt from various modules. From this milestone, we are given the opportunity to practise Blackbox testing, Whitebox testing, software configuration management through GitHub and many other techniques taught.
+  
+Through this project, I’ve learnt the importance of design planning, prototyping, timing estimation, software development techniques, testing methods and many more. It is crucial to apply all this techniques hand in hand when it comes to software development to ensure our plan is feasible and achievable.
+  
+Although this project is a good exposure for us to apply concepts taught and for us to develop a project in the manner we want, I felt that more guidance should be given to allow students to understand what is “not do-able”. By combining 2  modules together to develop a project is rather challenging as students are expected to know how to bridge connections between provided hardware to our developed webpage as well as tools required to ensure workability(which none are taught). As a result, most of us are left researching on our own to look for ways to meet the client’s requirements(and there are some that could not be met), which I feel is unfair to be graded based on it.
+  
+I personally feel that this project will be fun, enjoyable and a great learning experience if more help and time could be provided. 
+
   
 ## Mohammad Shahmizan Bin Sham Affandi (BS006)
 The progress I made on this Milestone 3 was definitely not up to the standards of the previous Milestones. My expertise was lacking, the team's motivation was low, and with such high expectations, the stars were never aligned from the start.
