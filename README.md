@@ -90,7 +90,7 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>ID</td>
     <td>State Test</td>
     <td>Actual Results</td>
-    <td>Pass✔/Fail❌</td>
+    <td>Pass✔/N.A.</td>
   </tr>
   <tr>
     <td>1</td>
@@ -101,17 +101,17 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>2</td>
     <td><img src="/img/tests/ST2.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>3</td>
     <td><img src="/img/tests/ST3.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>4</td>
     <td><img src="/img/tests/ST4.jpg"/></td>
     <td><img src="/"/></td>
-    <td>❌</td>
+    <td>N.A.</td>
   </tr><tr>
     <td>5</td>
     <td><img src="/img/tests/ST5.jpg"/></td>
@@ -273,11 +273,17 @@ For the ```getdata()```, we are unable to generate a test case using codes as be
 We then used another application to test out this function's coverage. There are only ```3 branches``` to be covered. They are:
 - POST 
   - Line ```46-51```
+  - POST-ing data (can be any data)
 - GET (with data)
   - Line ```53-55```
+  - GET-ing the data (will retrieve the data POSTed before this)
 - GET (without data)
   - Line ```56```
+  - GET-ing the data again (will retrieve no data because it has been retrieved)
 
+As seen below, we will use Postman for these final few coverage (all of which is reflected accordingly):
+
+![Whitebox Testing Coverage 20](/img/tests/coverage%20report%2020%20postman.gif)
 
 
 
@@ -299,11 +305,19 @@ Some issues identified throughout the entire project were due to the scheduling 
 <to do>
   
 ## Koh Jia Cheng (BS005)
-<to do>
+I have learnt many different technical abilities from this milestone. As I was the one who tackled the portion on the Whitebox Testing, so I had to incorporate all the different libraries into the current application and make sure I am able to run them in the virtual environment to test the different features and coverage of the code. The initial startup to learn and integrate all the different libraries and also to used them proved to be a very tedious challenge as I have to be able to stimulate the different test conditions for the functions that is in the main file. This mean scouring the internet for documenation, stackoverflow etc to search for some obscure errors.
+
+This have made me learned the different competencies when it comes to whitebox testing such as using the libraries to perform comprehensive coverage for the system. These which I hope to remember in time to come for my future use next time when necessary because it was a lot of sequence of actions to do before I manage to get everything working.
+
+The project has taught many other intricacies such as using github and also following a developmental flow to finally create this application. This could be applied to the real world scenarios next time where there is also a good chance that people use github and also follow similar workflow as well. Having a more familiar flow which I can look back to and grasp and idea of is really comforting in the grand scheme of things. Though we cannot be fully prepared for what's to come, I think this has shed quite some good light on how Software Engineering works.
   
 ## Lee Wei Jie (BS005)
 <to do>
   
 ## Mohammad Shahmizan Bin Sham Affandi (BS006)
-<to do>
+The progress I made on this Milestone 3 was definitely not up to the standards of the previous Milestones. My expertise was lacking, the team's motivation was low, and with such high expectations, the stars were never aligned from the start.
+
+Between conducting research on how to make something work, aligning to the Software Engineering principles taught, all while trying to satisfy the deliverables of the client, lies my team stretched thin.
+
+Overall this project was truly an experience to show the strains of a typical Software Engineering project process. Making references back to the first few weeks of Professor Alex's lectures, I am finally able to wrap my head around the reality on the success, but more particularly the failure rates of high-profile SE projects. Whatever the outcome of this project / Milestone, it's all part of the learning process. <i> - Shahmizan </i>
 
