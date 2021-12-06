@@ -8,21 +8,21 @@
 		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
 		<style>
 		    #instructionsList {
-			list-style-type: none; 		/* Removes the list dot */
-                	padding-left: 0px;          /* ADDED - SHAHMIZAN */
+			list-style-type: none;
+                	padding-left: 0px;
 		    }
 		    li{
 			margin-top: 10px;
 		    }
 		</style>
 	</head>
-	<h2 class="major" style="padding: 15px;">Beat the Challenge!</h2>      <!-- ADDED - SHAHMIZAN -->
+	<h2 class="major" style="padding: 15px;">Beat the Challenge!</h2>
         <body style="padding: 15px; float:none;">
 
-	<!-- Container -->                                                     <!-- ADDED - SHAHMIZAN -->
+	<!-- Container -->
 	<div class="container" style="display: flex; flex-wrap: wrap;">
 
-            <!-- 1st Column -->                                                    <!-- ADDED - SHAHMIZAN -->
+            <!-- 1st Column -->
             <div style="flex-grow:0; align-self:auto; margin-right: 50px;">
                 <ul id = "instructionsList" style="font-size: 20px;">
                     <li draggable="true">Move Forward</li>
@@ -30,10 +30,10 @@
                     <li draggable="true">Turn Right</li>
                     <li draggable="true">Turn Left</li>
                 </ul>
-                <a href="/" id="homeBtn" class="button primary" draggable="false">☰ Home</a>   <!-- ADDED - SHAHMIZAN -->
+                <a href="/" id="homeBtn" class="button primary" draggable="false">☰ Home</a>
             </div>
 
-            <!-- 2nd Column -->                                                     <!-- ADDED - SHAHMIZAN -->
+            <!-- 2nd Column -->
             <div name = "fullNamesContainer" style="flex-grow:0; align-self:auto;">
                 <form action="/sendInstructions" method="post">
                     <form action="/action_page.php">
