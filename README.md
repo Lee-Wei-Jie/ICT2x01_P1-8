@@ -11,7 +11,7 @@ Singapore Institute of Technology
 - Mohammad Shahmizan Bin Sham Affandi (BS006)
 
 # Getting Started
-## Denpendencies
+## Dependencies
 - Flask 
 - Python >= 3.7.1
 
@@ -261,8 +261,7 @@ pytest -v
 ![Whitebox Testing Pytest](/img/tests/whitebox-testing-allfunctions.gif)
 
 ----
-
-Alternatively, you can use to get the coverage whereby you can then view it in a html file by opening it on a browser:
+You can refer to the pytest [documentation](https://coverage.readthedocs.io/en/6.2/) to get the coverage whereby you can then view it in a html file by opening it on a browser:
 ```
 py.test test_fullsuite.py --cov=main --cov-report=html
 ```
