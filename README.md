@@ -60,8 +60,8 @@ Request for a pull, before merging from the new branch to the respective develop
      - Accessing 
        - Home page
        - Play page
-         - Split line function
-         - Split line adapter design function
+         - Splitline function
+         - Splitline adapter design function
          - With wrong instructions
          - With correct instructions
          - Witn no instructions
@@ -99,7 +99,7 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ## White-box Testing
 
-- Login Full Test Suite 
+- Full Test Suite for the entire file
 
 ![Whitebox Testing - Success](/img/tests/whitebox-testing-allfunctions.gif)
 
