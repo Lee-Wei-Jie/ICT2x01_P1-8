@@ -104,7 +104,9 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ![ST9 - Terminated the web application](/img/tests/ST9.gif)
 
-### Login
+### LOGIN
+---
+
 - No PIN Specified
 
 ![Login Test - No PIN](/img/tests/login-no-pin.gif)
