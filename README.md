@@ -117,7 +117,6 @@ Request for a pull, before merging from the new branch to the respective develop
 
 
 ## White-box Testing
----
 
 First, ensure that you are in the ```Webpage``` folder.
 
@@ -127,6 +126,17 @@ You can run the test using this command:
 ```
 pytest -v
 ```
+Alternatively, you can use to get the coverage:
+```
+pytest-cov
+```
+You can refer to the library documentation 
+
+The file that does the testing can be found [documentation](https://docs.pytest.org/en/6.2.x/contents.html "here"):
+
+```Webpage/test_fullsuite.py```
+
+
 
 ### Full Test Suite testing all endpoints and functions
 
