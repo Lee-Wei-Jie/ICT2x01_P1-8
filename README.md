@@ -292,14 +292,6 @@ As seen below, we will use Postman for these final few coverage (all of which is
 ![Whitebox Testing Coverage 20](/img/tests/coverage%20report%2020%20postman.gif)
 
 
-
-
-
-
-<p align="center">
-  <img src="https://thumbs.gfycat.com/UltimateBlandCrane-size_restricted.gif" alt="Car" />
-</p>
-
 # Issues Identified
 Some issues identified throughout the entire project were due to the scheduling (timetable) of both Information Security and Software Engineering students. As both courses were very busy with each of their relative assessments and assignments, it is very difficult to meet up and complete the project. The timings of both of our classes were also clashing, making it even more difficulty to hold weekly in person meetings to complete the project. As the main objective of this project is to include commands to send to the web page to guide users to solve challenges while teaching critical problem solving and computational thinking skills, our main focus was to ensure commands can be sent from the webpage to the car, which was completed. 
 
@@ -329,3 +321,7 @@ Between conducting research on how to make something work, aligning to the Softw
 
 Overall this project was truly an experience to show the strains of a typical Software Engineering project process. Making references back to the first few weeks of Professor Alex's lectures, I am finally able to wrap my head around the reality on the success, but more particularly the failure rates of high-profile SE projects. Whatever the outcome of this project / Milestone, it's all part of the learning process. <i> - Shahmizan </i>
 
+
+<p align="center">
+  <img src="https://thumbs.gfycat.com/UltimateBlandCrane-size_restricted.gif" alt="Car" />
+</p>
