@@ -11,7 +11,17 @@ Singapore Institute of Technology
 - Mohammad Shahmizan Bin Sham Affandi (BS006)
 
 # Getting Started
+## Denpendencies
+- Flask 
+- Python >= 3.7.1
+
+
 ### Car
+### Installation Guide 
+1. Clone the repository
+2. Download the necessary python version available
+3. In the command prompt, enter "pip install flask" followed by enter key
+4. To start hosting the webpage, enter the current project directory in command prompt and enter "python ./main.py" OR click on the "run" button.
 
 ### Webpage
 
@@ -80,7 +90,7 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>ID</td>
     <td>State Test</td>
     <td>Actual Results</td>
-    <td>Pass✔</td>
+    <td>Pass✔/Fail❌</td>
   </tr>
   <tr>
     <td>1</td>
@@ -91,17 +101,17 @@ Request for a pull, before merging from the new branch to the respective develop
     <td>2</td>
     <td><img src="/img/tests/ST2.jpg"/></td>
     <td><img src="/"/></td>
-    <td>N.A.</td>
+    <td>❌</td>
   </tr><tr>
     <td>3</td>
     <td><img src="/img/tests/ST3.jpg"/></td>
     <td><img src="/"/></td>
-    <td>N.A.</td>
+    <td>❌</td>
   </tr><tr>
     <td>4</td>
     <td><img src="/img/tests/ST4.jpg"/></td>
     <td><img src="/"/></td>
-    <td>N.A.</td>
+    <td>❌</td>
   </tr><tr>
     <td>5</td>
     <td><img src="/img/tests/ST5.jpg"/></td>
@@ -169,7 +179,7 @@ Request for a pull, before merging from the new branch to the respective develop
   <tr>
     <td>Test Case</td>
     <td>Actual Results</td>
-    <td>Pass✔</td>
+    <td>Pass✔/Fail❌</td>
   </tr>
   <tr>
     <td>No PIN Specified</td>
@@ -282,7 +292,7 @@ We then used another application to test out this function's coverage. There are
 Some issues identified throughout the entire project were due to the scheduling (timetable) of both Information Security and Software Engineering students. As both courses were very busy with each of their relative assessments and assignments, it is very difficult to meet up and complete the project. The timings of both of our classes were also clashing, making it even more difficulty to hold weekly in person meetings to complete the project. As the main objective of this project is to include commands to send to the web page to guide users to solve challenges while teaching critical problem solving and computational thinking skills, our main focus was to ensure commands can be sent from the webpage to the car, which was completed. 
 
 ## Car Demonstration
-![Car Demo](/img/tests/P2_P7_Demo(New).mp4)
+![Car Demo](/img/tests/P2_P7_Demo(New).avi)
 
 # Reflections
 ## Crystal Choo Jia Xian (BS006)
@@ -295,9 +305,5 @@ Some issues identified throughout the entire project were due to the scheduling 
 <to do>
   
 ## Mohammad Shahmizan Bin Sham Affandi (BS006)
-The progress I made on this Milestone 3 was definitely not up to the standards of the previous Milestones. My expertise was lacking, the team's motivation was low, and with such high expectations, the stars were never aligned from the start.
-  
-Between conducting research on how to make something work, aligning to the Software Engineering principles taught, all while trying to satisfy the deliverables of the client, lies my team stretched thin.
-  
-Overall this project was truly an experience to show the strains of a typical Software Engineering project process. Making references back to the first few weeks of Professor Alex's lectures, I am finally able to wrap my head around the reality on the success, but more particularly the failure rates of high-profile SE projects. Whatever the outcome of this project / Milestone, it's all part of the learning process. <i> - Shahmizan </i>
+<to do>
 
