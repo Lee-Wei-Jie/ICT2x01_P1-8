@@ -61,7 +61,13 @@ Request for a pull, before merging from the new branch to the respective develop
 
 ![Login Test - Max Attempts](/img/tests/login-post-limit-attempt.gif)
 
+- Clear Field
+
+![Login Test - Max Attempts](/img/tests/login-clear-fields.gif)
+
 - Successfully Logged-in
+
+![Login Test - Max Attempts](/img/tests/login-success.gif)
 
 ## White-box Testing
 # References
