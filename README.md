@@ -76,6 +76,8 @@ Request for a pull, before merging from the new branch to the respective develop
 ### USER ACCEPTANCE TESTING
 
 ### System Test Case 1
+- ST1 tests if user are able to access the localhost webpage.
+![ST5 - Redirect Page to Play](/img/tests/ST1.gif)
 
 ### System Test Case 5
 - ST5 test for page redirection after a user enters the webpage and click on the play button, the page will redirct user to the play state, which should show the game screen.
@@ -83,6 +85,9 @@ Request for a pull, before merging from the new branch to the respective develop
 ![ST5 - Redirect Page to Play](/img/tests/ST5.gif)
 
 ### System Test Case 6
+- ST6 test for the ability to drag and drop commands to a provided dropbox to send to the car on the webpage. Once user hits 'Send!', commands in the dropbox would be sent to the car.
+
+![ST6 - Drag & Drop Commands to send to Car](/img/tests/ST6.gif)
 
 ### System Test Case 7
 
