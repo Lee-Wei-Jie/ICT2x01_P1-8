@@ -44,6 +44,7 @@ def splitLines(instr):
 def getdata():
    global getflag
    if request.method == 'POST':
+      getflag = 1
       instructions = request.form['message']
       commands = splitLines(instructions)
       mylist.append(str(instructions))
