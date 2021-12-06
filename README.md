@@ -197,8 +197,10 @@ The file that does the testing can be found [documentation](https://docs.pytest.
   <img src="https://thumbs.gfycat.com/UltimateBlandCrane-size_restricted.gif" alt="Car" />
 </p>
 
+# Issues Identified
+
 ## Car Demonstration
-![Car Demo](/img/tests/P2_P7_Demo(New))
+![Car Demo](/img/tests/P2_P7_Demo(New).avi)
 
 # Reflections
 ## Crystal Choo Jia Xian (BS006)
