@@ -253,7 +253,6 @@ All the test are run through in this python file: ```Webpage/test_fullsuite.py``
 
 You can refer to the pytest [documentation](https://docs.pytest.org/en/6.2.x/contents.html "here").
 
-<add the env examples>
 
 You can run the test using this command:
 
@@ -265,7 +264,7 @@ pytest -v
 ----
 You can refer to the pytest [documentation](https://coverage.readthedocs.io/en/6.2/) to get the coverage whereby you can then view it in a html file by opening it on a browser:
 ```
-py.test test_fullsuite.py --cov=main --cov-report=html
+py.test test_fullsuite.py --cov=main --cov-report=html -v
 ```
 ![Whitebox Testing Coverage](/img/tests/whitebox-testing-coverage.gif)
 
