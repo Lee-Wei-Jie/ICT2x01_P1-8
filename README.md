@@ -77,32 +77,56 @@ Request for a pull, before merging from the new branch to the respective develop
 ---
 <table>
   <tr>
+    <td>ID</td>
+    <td>State Test</td>
+    <td>Actual Results</td>
+    <td>Pass✔/Fail❌</td>
+  </tr>
+  <tr>
+    <td>1</td>
     <td><img src="/img/tests/ST1.jpg"/></td>
     <td><img src="/img/tests/ST1.gif"/></td>
+    <td>✔</td>
   </tr><tr>
+    <td>2</td>
     <td><img src="/img/tests/ST2.jpg"/></td>
     <td><img src="/"/></td>
+    <td>❌</td>
   </tr><tr>
+    <td>3</td>
     <td><img src="/img/tests/ST3.jpg"/></td>
     <td><img src="/"/></td>
+    <td>❌</td>
   </tr><tr>
+    <td>4</td>
     <td><img src="/img/tests/ST4.jpg"/></td>
     <td><img src="/"/></td>
+    <td>❌</td>
   </tr><tr>
+    <td>5</td>
     <td><img src="/img/tests/ST5.jpg"/></td>
     <td><img src="/img/tests/ST5.gif"/></td>
+    <td>✔</td>
   </tr><tr>
+    <td>6</td>
     <td><img src="/img/tests/ST6.jpg"/></td>
     <td><img src="/img/tests/ST6.gif"/></td>
+    <td>✔</td>
   </tr><tr>
+    <td>7</td>
     <td><img src="/img/tests/ST7.jpg"/></td>
     <td><img src="/img/tests/ST7.gif"/></td>
+    <td>✔</td>
   </tr><tr>
+    <td>8</td>
     <td><img src="/img/tests/ST8.jpg"/></td>
     <td><img src="/img/tests/ST8.gif"/></td>
+    <td>✔</td>
   </tr><tr>
+    <td>9</td>
     <td><img src="/img/tests/ST9.jpg"/></td>
     <td><img src="/img/tests/ST9.gif"/></td>
+    <td>✔</td>
   </tr>
 </table>
 
