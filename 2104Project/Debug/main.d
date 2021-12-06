@@ -56,12 +56,12 @@ main.obj: C:/ti/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/msp432p4xx/
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h
 main.obj: ../functions.h
-main.obj: C:/Users/weiji/workspace_v10/2104Projectbackup25112021/ESP8266.h
+main.obj: C:/Users/weiji/workspace_v10/ESP8266(tester)/ESP8266.h
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h
-main.obj: C:/Users/weiji/workspace_v10/2104Projectbackup25112021/UART_Driver.h
-main.obj: C:/Users/weiji/workspace_v10/2104Projectbackup25112021/MSPIO.h
+main.obj: C:/Users/weiji/workspace_v10/ESP8266(tester)/UART_Driver.h
+main.obj: C:/Users/weiji/workspace_v10/ESP8266(tester)/MSPIO.h
 
 ../main.c:
 
@@ -175,7 +175,7 @@ C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h:
 
 ../functions.h:
 
-C:/Users/weiji/workspace_v10/2104Projectbackup25112021/ESP8266.h:
+C:/Users/weiji/workspace_v10/ESP8266(tester)/ESP8266.h:
 
 C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h:
 
@@ -183,7 +183,7 @@ C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h
 
 C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h:
 
-C:/Users/weiji/workspace_v10/2104Projectbackup25112021/UART_Driver.h:
+C:/Users/weiji/workspace_v10/ESP8266(tester)/UART_Driver.h:
 
-C:/Users/weiji/workspace_v10/2104Projectbackup25112021/MSPIO.h:
+C:/Users/weiji/workspace_v10/ESP8266(tester)/MSPIO.h:
 
