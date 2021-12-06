@@ -80,13 +80,13 @@ Request for a pull, before merging from the new branch to the respective develop
     <td><img src="/img/tests/ST1.jpg"/></td>
     <td><img src="/img/tests/ST1.gif"/></td>
   </tr><tr>
-    <td><img src="/"/></td>
-    <td><img src="/"/></td>
-  </tr><tr>
-    <td><img src="/"/></td>
+    <td><img src="/img/tests/ST2.jpg"/></td>
     <td><img src="/"/></td>
   </tr><tr>
+    <td><img src="/img/tests/ST3.jpg"/></td>
     <td><img src="/"/></td>
+  </tr><tr>
+    <td><img src="/img/tests/ST4.jpg"/></td>
     <td><img src="/"/></td>
   </tr><tr>
     <td><img src="/img/tests/ST5.jpg"/></td>
