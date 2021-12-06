@@ -111,17 +111,17 @@ Request for a pull, before merging from the new branch to the respective develop
   </tr><tr>
     <td>2</td>
     <td><img src="/img/tests/ST2.jpg"/></td>
-    <td><img src="/"/></td>
+    <td>Not Applicable! Wifi module auto connects to WIFI network when powered on</td>
     <td>N.A.</td>
   </tr><tr>
     <td>3</td>
     <td><img src="/img/tests/ST3.jpg"/></td>
-    <td><img src="/"/></td>
+    <td>Not Applicable! Wifi module auto connects to WIFI network when powered on</td>
     <td>N.A.</td>
   </tr><tr>
     <td>4</td>
     <td><img src="/img/tests/ST4.jpg"/></td>
-    <td><img src="/"/></td>
+    <td>Not Applicable! Wifi module auto connects to WIFI network when powered on</td>
     <td>N.A.</td>
   </tr><tr>
     <td>5</td>
